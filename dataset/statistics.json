@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-07-21T18:07:50.684806+00:00",
+  "dataset": "ScentAI 32K Grounded Perfume Conversations",
+  "license": "CC-BY-NC-SA-4.0",
+  "source_dataset": {
+    "title": "Fragrantica Perfumes: Ratings, Notes, Votes & More",
+    "publisher": "Le Decanteur",
+    "url": "https://www.kaggle.com/datasets/ledecanteur/fragrantica-perfumes",
+    "version": 2,
+    "license": "CC-BY-NC-SA-4.0",
+    "catalog_records": 131930
+  },
+  "public_exports": {
+    "record_count": 32000,
+    "role_signatures": {
+      "system/user/assistant": 32000
+    },
+    "exports_content_equivalent": true,
+    "duplicate_user_prompt_instances": 329,
+    "duplicate_full_example_instances": 81,
+    "average_characters": {
+      "answer": 556.77,
+      "system": 314.75,
+      "user": 4560.14
+    },
+    "files": {
+      "train_set/final/training_main_32000_openai.jsonl": {
+        "bytes": 180882290,
+        "sha256": "0d16a9136438387396585bd8a65c3ca71b30b4a5dc12f20696e7abdb2088c52c"
+      },
+      "train_set/final/training_main_32000_gemini.jsonl": {
+        "bytes": 180754290,
+        "sha256": "048e0b96798d8168bf8a971a499dc82f73681b30844597e34e2f6d8bf8a1b8a7"
+      }
+    }
+  },
+  "generation_sources": {
+    "level_counts": {
+      "L1": 4000,
+      "L2": 6000,
+      "L3": 7000,
+      "L4": 10000,
+      "L5": 5000
+    },
+    "category_counts": {
+      "L1": {},
+      "L2": {
+        "comparison": 600,
+        "inclusive_gender_explicit": 180,
+        "multi_filter": 1500,
+        "negative_filter": 1200,
+        "no_match": 300,
+        "numeric_filter": 780,
+        "ranking": 720,
+        "single_filter": 720
+      },
+      "L3": {
+        "casual_vibe": 1540,
+        "conceptual_contradiction": 560,
+        "likes_dislikes": 1120,
+        "messy_query": 980,
+        "negative_preference": 840,
+        "occasion": 980,
+        "reference_similarity": 980
+      },
+      "L4": {
+        "avoidance_reasoning": 1400,
+        "collection_gap": 1500,
+        "compare_and_decide": 1400,
+        "no_strong_match": 500,
+        "occasion_with_tradeoffs": 1800,
+        "persona_upgrade": 1800,
+        "style_translation": 1600
+      },
+      "L5": {
+        "avoid_previous_recommendations": 600,
+        "empty_profile": 500,
+        "low_confidence_profile": 300,
+        "profile_dislikes": 800,
+        "profile_likes": 900,
+        "profile_likes_and_dislikes": 1000,
+        "profile_query_conflict": 600,
+        "profile_update_request": 300
+      }
+    },
+    "query_source_counts_l3_l5": {
+      "pool:openrouter_gpt41_mini": 8714,
+      "pool:openrouter_llama33_70b": 13286
+    },
+    "rag_counts": {
+      "L2:False": 1199,
+      "L2:True": 4801,
+      "L3:False": 2077,
+      "L3:True": 4923,
+      "L4:False": 1155,
+      "L4:True": 8845,
+      "L5:False": 461,
+      "L5:True": 4539
+    },
+    "duplicate_full_example_instances_by_level": {
+      "L1": 1,
+      "L2": 79,
+      "L3": 1,
+      "L4": 0,
+      "L5": 0
+    },
+    "duplicate_full_example_groups_by_level": {
+      "L1": 1,
+      "L2": 40,
+      "L3": 1,
+      "L4": 0,
+      "L5": 0
+    },
+    "source_file_count": 50,
+    "excluded_sources": [
+      "l3_main_014_debug.jsonl"
+    ]
+  },
+  "split": {
+    "seed": 20260629,
+    "train_records": 30400,
+    "validation_records": 1600,
+    "validation_ratio": 0.05
+  }
+}

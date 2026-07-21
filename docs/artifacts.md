@@ -23,13 +23,26 @@ The evaluated catalog contained 131,930 perfumes and 692,729 directed similarity
 ## Why They Are Excluded
 
 - Git is not suitable for model checkpoints or vector snapshots of this size.
-- Raw catalog redistribution requires a separate source-license review.
+- The raw 131,930-record perfume catalog is not republished by this repository.
 - Model adapters may have terms inherited from the base model and training inputs.
 - Deployment secrets must never be stored beside source code.
 
-## Distribution Plan
+## Dataset Distribution
 
-When distribution rights are established, model adapters should live in a dedicated model registry and datasets in a dedicated dataset registry. GitHub should contain checksums, schemas, small samples, and build scripts rather than the binary artifacts themselves.
+The 32,000-record synthetic conversation corpus is a derivative of [Le Decanteur's Fragrantica
+Perfumes dataset](https://www.kaggle.com/datasets/ledecanteur/fragrantica-perfumes), which is
+licensed under CC BY-NC-SA 4.0. It is prepared for separate Kaggle distribution under the same
+license. The Git repository contains its dataset card, attribution, statistics, sample, and
+reproducible packaging tools, while the compressed JSONL exports remain in the dataset registry.
+
+The Kaggle package deliberately contains generated conversations rather than a second copy of the
+source catalog. See [`dataset/README.md`](../dataset/README.md) for intended uses, limitations, and
+the relationship between the Gemma and OpenAI-compatible exports.
+
+## Model Distribution
+
+Model adapters should live in a dedicated model registry only after their inherited base-model and
+training-data terms have been reviewed. Chroma and SQLite runtime snapshots remain deployment
+artifacts rather than public dataset files.
 
 Historical release manifests are retained under [`evaluation/historical_manifests`](../evaluation/historical_manifests/) for provenance. Their paths describe the original development workspace and are not current installation instructions.
-

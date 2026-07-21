@@ -1,0 +1,16 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a professional perfume database assistant. Answer the query based strictly on the provided perfume context if available, otherwise state the database facts. Avoid making interpretations, recommendations, or qualitative assertions."
+    },
+    {
+      "role": "user",
+      "content": "What accords are present in Iris in Jiangnan No.P43 江南鸢尾 by ChuJian 初柬?"
+    },
+    {
+      "role": "model",
+      "content": "The accord profile for Iris in Jiangnan No.P43 江南鸢尾 by ChuJian 初柬 consists of: musky, iris, earthy, green, fresh, violet, aldehydic, powdery."
+    }
+  ]
+}

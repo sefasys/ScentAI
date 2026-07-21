@@ -14,24 +14,43 @@ This repository is a research preview. The end-to-end system works, the public d
 - Refuses unsupported live-price, availability, medical, and social-outcome claims.
 - Validates generated perfume names and facts against the retrieved context.
 
+## Technology Stack
+
+| Layer | Technology | Responsibility |
+| --- | --- | --- |
+| Web application | React 19, TypeScript, Vite | Conversation UI, warm-up state, anonymous session persistence |
+| Public edge | Cloudflare Workers and Workers Assets | Static hosting, same-origin API gateway, secret injection, request validation, rate limiting, security headers |
+| Application API | FastAPI and Pydantic on Modal | Asynchronous chat/warm-up jobs, session lifecycle, orchestration, response contracts |
+| Model serving | Gemma 4 12B, ScentAI LoRA, vLLM | Planning, consultant-style generation, validation-triggered LoRA repair |
+| GPU compute | Modal A100 80 GB | Scale-to-zero model worker with cached model and vLLM artifacts |
+| Retrieval | BGE-M3, Chroma, SQLite | Semantic search, structured perfume metadata, canonical identity, similarity graph |
+| Packaging | Docker Compose and Modal Images | Reproducible local/self-hosted services and cloud deployment |
+| Quality | Pytest, Vitest, frozen evaluation contracts | Unit, API, retrieval, frontend, grounding, and behavioral regression checks |
+
 ## Architecture
 
 ```mermaid
 flowchart LR
-    UI[React web client] --> CF[Cloudflare Worker gateway]
-    CF --> API[Modal FastAPI service]
-    API --> ORCH[ScentAI orchestrator]
-    ORCH --> LLM[Gemma 4 12B via vLLM]
-    ORCH --> RET[BGE-M3 retrieval service]
+    UI[React and Vite web client] --> CF[Cloudflare Worker gateway]
+    CF -->|API key injected server-side| API[Modal FastAPI service]
+    API --> ORCH[ScentAI orchestrator and validator]
+    ORCH --> LLM[Modal A100 model worker: Gemma 4 and LoRA via vLLM]
+    ORCH --> RET[Modal CPU retrieval worker: BGE-M3]
     RET --> CHROMA[Chroma vector index]
     RET --> SQL[SQLite catalog and similarity graph]
-    ORCH --> VAL[Grounding and constraint validator]
-    VAL --> API
+    LLM --> MV[Modal model and cache volumes]
+    RET --> DV[Modal data and Hugging Face cache volumes]
 ```
 
 The base model performs semantic planning and writes the first answer. The ScentAI LoRA is retained as a repair model when validation rejects the first generation. Deterministic code is limited to evidence checks, hard exclusions, exact field copying, identity resolution, and output safety.
 
-Read [the architecture notes](docs/architecture.md) for the full request path.
+The public browser talks only to Cloudflare. The Worker keeps `SCENTAI_API_KEY` out of the client,
+sanitizes the exposed route set, and proxies accepted requests to the Modal endpoint. Modal keeps the
+FastAPI, GPU model, and CPU retrieval processes independently deployable and independently scalable.
+
+Read [the architecture notes](docs/architecture.md) for service boundaries, cold-start behavior,
+security decisions, and the full request path. Operational setup is documented separately for
+[Modal](deploy/release/modal.md) and [Cloudflare](deploy/release/cloudflare.md).
 
 ## Repository Layout
 
@@ -43,7 +62,9 @@ deploy/             Docker, Modal, FastAPI, and release infrastructure
 notebooks/          Curated Colab workflows for training and inference
 evaluation/         Frozen 120-case evaluation set and compact reports
 tests/              Artifact-free unit and contract tests
+dataset/            Dataset card, attribution, license, sample, and Kaggle metadata
 docs/               Architecture, methodology, artifacts, and roadmap
+tools/              Dataset audit and release-packaging utilities
 ```
 
 ## Evaluation Snapshot
@@ -104,15 +125,36 @@ The synthetic training curriculum separates five behavior levels:
 | L4 | grounded recommendations with reasoning |
 | L5 | profile-aware and multi-turn personalization |
 
-The main training plan contains 32,000 examples. Generation code, quality gates, provider pooling, checkpointing, and dataset validators live under [`research/`](research/). Large generated datasets are excluded pending a separate distribution and licensing review.
+The main training plan contains 32,000 examples. Generation code, quality gates, provider pooling, checkpointing, and dataset validators live under [`research/`](research/). The generated corpus is documented separately from the source code and prepared for Kaggle distribution under its inherited data license.
+
+## Dataset
+
+**ScentAI 32K Grounded Perfume Conversations** is the instruction-tuning corpus used by this
+project. It contains 32,000 synthetic, three-message conversations across the L1-L5 curriculum,
+plus a reproducible 30,400/1,600 train-validation split.
+
+The perfume evidence derives from [Fragrantica Perfumes: Ratings, Notes, Votes & More](https://www.kaggle.com/datasets/ledecanteur/fragrantica-perfumes),
+published by Le Decanteur on Kaggle. The derived conversation dataset is therefore prepared under
+`CC BY-NC-SA 4.0`: attribution is required, commercial use is prohibited, and adaptations must use
+the same license. ScentAI is independent and is not affiliated with Fragrantica or Le Decanteur.
+
+The large JSONL exports remain outside Git. See the [dataset card](dataset/README.md),
+[attribution notice](dataset/ATTRIBUTION.md), [corpus statistics](dataset/statistics.json), and
+[`build_kaggle_package.py`](tools/build_kaggle_package.py) for the exact package and provenance.
 
 ## Deployment
 
-- **Model:** Gemma 4 12B BF16 with dynamic rank-16 LoRA on vLLM.
-- **GPU:** scale-to-zero Modal A100 80 GB worker.
-- **Retrieval:** one CPU BGE-M3, Chroma, and SQLite service.
-- **API:** FastAPI with API-key protection and bounded in-memory sessions.
-- **Web:** React served by Cloudflare Workers through a same-origin gateway.
+- **Cloudflare:** serves the React build and runs the public gateway. Separate rate limiters protect
+  chat creation, warm-up creation, and polling; the Modal credential exists only as a Worker secret.
+- **Modal API:** a public FastAPI ASGI function exposes asynchronous warm-up, chat, polling, and
+  session-deletion contracts. It coordinates private workers without exposing them directly.
+- **Modal model worker:** runs Gemma 4 12B in BF16 on an A100 80 GB through vLLM 0.25.1. The rank-16
+  adapter is loaded dynamically and the worker scales to zero when idle.
+- **Modal retrieval worker:** runs BGE-M3 on CPU against persistent Chroma and SQLite artifacts.
+- **Modal Volumes:** retain the LoRA, catalog, vector index, Hugging Face snapshot, and vLLM cache
+  across ephemeral containers.
+- **Docker Compose:** mirrors the model/retrieval/API separation for a reserved GPU host or local
+  infrastructure testing.
 
 Cold starts can take several minutes because the model worker scales to zero. Warm request latency is substantially lower and should be evaluated separately from startup time.
 
@@ -121,12 +163,14 @@ Cold starts can take several minutes because the model worker scales to zero. Wa
 This source repository does **not** contain:
 
 - raw or cleaned perfume catalog exports;
-- generated training datasets;
+- large generated training exports (they are packaged separately for Kaggle);
 - LoRA checkpoints or base-model weights;
 - Chroma or SQLite runtime snapshots;
 - API keys, tokens, or deployment secrets.
 
-The code can be reviewed and tested without those files. Reproducing the complete hosted system requires supplying compatible artifacts as documented in [Artifacts and data](docs/artifacts.md).
+The code can be reviewed and tested without those files. A small schema-valid example and complete
+dataset documentation are kept under [`dataset/`](dataset/). Reproducing the complete hosted system
+still requires compatible runtime artifacts as documented in [Artifacts and data](docs/artifacts.md).
 
 ## Project Status
 
