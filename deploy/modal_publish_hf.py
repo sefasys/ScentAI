@@ -44,6 +44,7 @@ publisher_image = (
     modal.Image.debian_slim(python_version="3.12")
     .pip_install(
         "huggingface-hub==0.36.2",
+        "numpy==2.2.6",
         "safetensors==0.6.2",
     )
     .add_local_file(MODEL_CARD, "/assets/README.md", copy=True)
@@ -89,7 +90,9 @@ def validate_adapter(adapter_dir: Path) -> dict[str, Any]:
 
     from safetensors import safe_open
 
-    with safe_open(weights_path, framework="pt", device="cpu") as handle:
+    # NumPy is sufficient for structural inspection and keeps this CPU-only
+    # publisher independent of the much larger PyTorch runtime.
+    with safe_open(weights_path, framework="numpy") as handle:
         tensor_keys = list(handle.keys())
     if not tensor_keys or not all("lora_" in key for key in tensor_keys):
         raise ValueError("Adapter safetensors does not contain the expected LoRA tensors")

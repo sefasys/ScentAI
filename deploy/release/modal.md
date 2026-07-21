@@ -162,6 +162,9 @@ The publisher:
   hash manifest;
 - creates the repository as private so its card and loading example can be checked before release.
 
+The publisher intentionally uses the safetensors NumPy backend for structural validation. It does
+not install PyTorch, load Gemma 4, or allocate a GPU.
+
 The existing `scentai-huggingface` Modal secret must contain a Hugging Face token with write access.
 If the token was created for model downloads only, replace it through the Modal dashboard before
 running the publisher. Never paste the token into source code or commit it to Git.
