@@ -1,0 +1,37 @@
+{
+  "version": "final_eval_v1",
+  "started_at_utc": "2026-07-18T15:07:30.842698+00:00",
+  "case_count": 120,
+  "resume": true,
+  "already_completed": 0,
+  "malformed_output_lines_skipped": 0,
+  "outputs_path": "/content/drive/MyDrive/Perfume-Dataset/runs/final_eval_v1_pipeline_v4/final_eval_outputs.jsonl",
+  "runtime": {
+    "model_name": "google/gemma-4-12B-it",
+    "answer_model": "google/gemma-4-12B-it",
+    "repair_model": "scentai",
+    "adapter_dir": "/content/drive/MyDrive/Perfume-Dataset/models/scentai-gemma-4-12b-it-full-fastmodel-lora/best_lora_adapter",
+    "retrieval_health": {
+      "status": "ok",
+      "model": "BAAI/bge-m3",
+      "device": "cpu",
+      "collection": "scentai_perfumes",
+      "collection_count": 131930,
+      "catalog": {
+        "perfumes": 131930,
+        "similarity_edges": 692729
+      },
+      "embedding_cache": {
+        "hits": 7,
+        "misses": 18,
+        "maxsize": 512,
+        "currsize": 18
+      },
+      "uptime_seconds": 709.98
+    }
+  },
+  "completed_at_utc": "2026-07-18T15:26:03.271228+00:00",
+  "completed_count": 120,
+  "summary_path": "/content/drive/MyDrive/Perfume-Dataset/runs/final_eval_v1_pipeline_v4/final_eval_summary.json",
+  "human_review_path": "/content/drive/MyDrive/Perfume-Dataset/runs/final_eval_v1_pipeline_v4/final_eval_human_review.csv"
+}

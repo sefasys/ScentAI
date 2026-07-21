@@ -1,0 +1,188 @@
+[
+  {
+    "id": "fresh_citrus_summer",
+    "query": "fresh citrus summer cologne",
+    "must_include_any": ["citrus", "fresh", "aromatic", "bergamot", "lemon"],
+    "term_min_hits": {"citrus": 5, "fresh": 4},
+    "expected_season": "summer",
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "fresh_citrus_summer_male",
+    "query": "fresh citrus summer cologne for men",
+    "allowed_genders": ["male", "unisex"],
+    "expected_season": "summer",
+    "must_include_any": ["citrus", "fresh", "aromatic"],
+    "term_min_hits": {"citrus": 5},
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "turkish_summer_male",
+    "query": "yaz için ferah temiz turunçgil erkek parfümü",
+    "allowed_genders": ["male", "unisex"],
+    "expected_season": "summer",
+    "must_include_any": ["citrus", "fresh", "aromatic", "bergamot", "lemon", "orange"],
+    "term_min_hits": {"citrus": 4},
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "warm_spicy_winter",
+    "query": "warm spicy winter perfume",
+    "expected_season": "winter",
+    "must_include_any": ["warm spicy", "amber", "vanilla", "woody", "cinnamon"],
+    "term_min_hits": {"warm spicy": 4},
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "date_vanilla",
+    "query": "sweet vanilla perfume for date night",
+    "expected_time": "night",
+    "must_include_any": ["vanilla", "sweet", "amber", "caramel", "tonka bean"],
+    "term_min_hits": {"vanilla": 4},
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "turkish_date_vanilla",
+    "query": "date night için tatlı vanilyalı ama ağır olmayan parfüm",
+    "expected_time": "night",
+    "must_include_any": ["vanilla", "sweet", "amber", "caramel"],
+    "term_min_hits": {"vanilla": 4},
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "clean_office",
+    "query": "clean office scent",
+    "expected_time": "day",
+    "must_include_any": ["fresh", "clean", "soapy", "musky", "powdery", "citrus"],
+    "term_min_hits": {"fresh": 3},
+    "must_exclude": ["oud", "animalic", "smoky"],
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "clean_office_without_vanilla",
+    "query": "Recommend a clean office scent without vanilla",
+    "expected_time": "day",
+    "must_include_any": ["fresh", "soapy", "musky", "powdery", "citrus"],
+    "must_exclude": ["vanilla", "oud", "animalic", "smoky"],
+    "term_min_hits": {"fresh": 3},
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "turkish_clean_office",
+    "query": "ofis için temiz sabunsu rahatsız etmeyen koku",
+    "expected_time": "day",
+    "must_include_any": ["fresh", "soapy", "musky", "powdery", "citrus"],
+    "must_exclude": ["oud", "animalic", "smoky"],
+    "term_min_hits": {"fresh": 3},
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "fougere_masculine",
+    "query": "old school masculine fougere",
+    "allowed_genders": ["male", "unisex"],
+    "must_include_any": ["aromatic", "lavender", "fresh spicy", "mossy", "oakmoss"],
+    "term_min_hits": {"aromatic": 4, "lavender": 2},
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "aventus_less_smoky",
+    "query": "I want something like Aventus but less smoky",
+    "expected_resolved_reference": "Aventus by Creed",
+    "exclude_exact_reference": true,
+    "must_include_any": ["pineapple", "citrus", "fruity", "woody", "fresh"],
+    "must_exclude": ["smoky"],
+    "term_min_hits": {"pineapple": 2, "woody": 4},
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "pineapple_woody",
+    "query": "pineapple woody fragrance",
+    "must_include_any": ["pineapple", "fruity", "woody", "citrus"],
+    "term_min_hits": {"pineapple": 2, "woody": 4},
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "rose_feminine_spring",
+    "query": "feminine rose perfume for spring",
+    "allowed_genders": ["female", "unisex"],
+    "expected_season": "spring",
+    "must_include_any": ["rose", "floral", "fresh", "powdery"],
+    "term_min_hits": {"rose": 3},
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "oud_winter",
+    "query": "dark oud winter fragrance",
+    "expected_season": "winter",
+    "must_include_any": ["oud", "woody", "smoky", "amber", "dark"],
+    "term_min_hits": {"oud": 3},
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "not_too_sweet",
+    "query": "cozy winter scent but not too sweet",
+    "expected_season": "winter",
+    "must_include_any": ["amber", "vanilla", "warm spicy", "woody"],
+    "must_exclude": ["sweet"],
+    "term_min_hits": {"warm spicy": 2, "woody": 3},
+    "min_hits_in_top_k": 4,
+    "min_popularity": 100
+  },
+  {
+    "id": "niche_mode",
+    "query": "rare niche smoky incense perfume",
+    "must_include_any": ["smoky", "incense", "amber", "woody", "balsamic"],
+    "term_min_hits": {"smoky": 2},
+    "min_hits_in_top_k": 3,
+    "allow_low_popularity": true
+  },
+  {
+    "id": "turkish_positive_brand_versace",
+    "query": "Versace'den erkek parfümü öner",
+    "required_brand": "Versace",
+    "allowed_genders": ["male", "unisex"],
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "dynamic_negative_brand_typo",
+    "query": "spicy fragrance for date night, exclude all kinds of Kurkdijan",
+    "excluded_brand_terms": ["Maison Francis Kurkdjian"],
+    "must_include_any": ["warm spicy", "amber", "vanilla", "sweet", "woody"],
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "bleu_de_chanel_similarity",
+    "query": "Recommend something similar to Bleu de Chanel",
+    "expected_resolved_reference": "Bleu de Chanel by Chanel",
+    "exclude_exact_reference": true,
+    "must_include_any": ["fresh spicy", "citrus", "aromatic", "amber", "woody"],
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  },
+  {
+    "id": "black_orchid_less_sweet",
+    "query": "Something similar to Black Orchid but less sweet",
+    "expected_resolved_reference": "Black Orchid by Tom Ford",
+    "exclude_exact_reference": true,
+    "must_include_any": ["floral", "earthy", "warm spicy", "amber", "patchouli", "woody"],
+    "must_exclude": ["sweet"],
+    "min_hits_in_top_k": 5,
+    "min_popularity": 100
+  }
+]

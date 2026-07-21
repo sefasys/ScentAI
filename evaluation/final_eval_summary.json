@@ -1,0 +1,179 @@
+{
+  "version": "final_eval_v1",
+  "created_at_utc": "2026-07-18T15:26:03.251341+00:00",
+  "case_count": 120,
+  "pass_count": 120,
+  "failure_count": 0,
+  "metrics": {
+    "overall_pass_rate": 1.0,
+    "language_pass_rate": 1.0,
+    "requested_count_pass_rate": 1.0,
+    "hard_filter_pass_rate": 1.0,
+    "hard_filter_plan_pass_rate": 1.0,
+    "hard_filter_output_pass_rate": 1.0,
+    "entity_resolution_pass_rate": 1.0,
+    "unsupported_route_pass_rate": 1.0,
+    "conversation_no_repeat_pass_rate": 1.0,
+    "performance_calibration_pass_rate": 1.0,
+    "first_attempt_rate": 0.9091,
+    "fallback_rate": 0.0667,
+    "average_latency_seconds": 9.2685,
+    "p50_latency_seconds": 9.4306,
+    "p95_latency_seconds": 14.291,
+    "max_latency_seconds": 21.3369
+  },
+  "quality_gates": {
+    "overall_pass_rate": {
+      "value": 1.0,
+      "operator": ">=",
+      "threshold": 0.95,
+      "pass": true
+    },
+    "language_pass_rate": {
+      "value": 1.0,
+      "operator": ">=",
+      "threshold": 1.0,
+      "pass": true
+    },
+    "requested_count_pass_rate": {
+      "value": 1.0,
+      "operator": ">=",
+      "threshold": 1.0,
+      "pass": true
+    },
+    "hard_filter_pass_rate": {
+      "value": 1.0,
+      "operator": ">=",
+      "threshold": 1.0,
+      "pass": true
+    },
+    "entity_resolution_pass_rate": {
+      "value": 1.0,
+      "operator": ">=",
+      "threshold": 1.0,
+      "pass": true
+    },
+    "unsupported_route_pass_rate": {
+      "value": 1.0,
+      "operator": ">=",
+      "threshold": 1.0,
+      "pass": true
+    },
+    "conversation_no_repeat_pass_rate": {
+      "value": 1.0,
+      "operator": ">=",
+      "threshold": 1.0,
+      "pass": true
+    },
+    "performance_calibration_pass_rate": {
+      "value": 1.0,
+      "operator": ">=",
+      "threshold": 1.0,
+      "pass": true
+    },
+    "first_attempt_rate": {
+      "value": 0.9091,
+      "operator": ">=",
+      "threshold": 0.9,
+      "pass": true
+    },
+    "fallback_rate": {
+      "value": 0.0667,
+      "operator": "<=",
+      "threshold": 0.05,
+      "pass": false
+    },
+    "p50_latency_seconds": {
+      "value": 9.4306,
+      "operator": "<=",
+      "threshold": 12.0,
+      "pass": true
+    },
+    "p95_latency_seconds": {
+      "value": 14.291,
+      "operator": "<=",
+      "threshold": 20.0,
+      "pass": true
+    }
+  },
+  "all_quality_gates_passed": false,
+  "category_summary": {
+    "comparison": {
+      "count": 15,
+      "pass_count": 15,
+      "pass_rate": 1.0
+    },
+    "conversation": {
+      "count": 10,
+      "pass_count": 10,
+      "pass_rate": 1.0
+    },
+    "entity_resolution": {
+      "count": 10,
+      "pass_count": 10,
+      "pass_rate": 1.0
+    },
+    "hard_filters": {
+      "count": 15,
+      "pass_count": 15,
+      "pass_rate": 1.0
+    },
+    "multilingual_noisy": {
+      "count": 10,
+      "pass_count": 10,
+      "pass_rate": 1.0
+    },
+    "perfume_profile": {
+      "count": 15,
+      "pass_count": 15,
+      "pass_rate": 1.0
+    },
+    "recommendation": {
+      "count": 20,
+      "pass_count": 20,
+      "pass_rate": 1.0
+    },
+    "similarity_alternative": {
+      "count": 15,
+      "pass_count": 15,
+      "pass_rate": 1.0
+    },
+    "unsupported": {
+      "count": 10,
+      "pass_count": 10,
+      "pass_rate": 1.0
+    }
+  },
+  "language_summary": {
+    "en": {
+      "count": 61,
+      "pass_count": 61,
+      "pass_rate": 1.0
+    },
+    "tr": {
+      "count": 59,
+      "pass_count": 59,
+      "pass_rate": 1.0
+    }
+  },
+  "route_counts": {
+    "llm_grounded": 48,
+    "validated_template_fallback": 8,
+    "llm_grounded_profile": 28,
+    "llm_grounded_comparison": 13,
+    "llm_grounded_similarity": 13,
+    "unsupported_price": 2,
+    "unsupported_availability": 2,
+    "unsupported_medical": 2,
+    "unsupported_social_claim": 2,
+    "unsupported_layering": 2
+  },
+  "generation_attempt_counts": {
+    "1": 100,
+    "2": 10,
+    "0": 10
+  },
+  "failure_counts": {},
+  "validator_reason_counts": {},
+  "failed_case_ids": []
+}

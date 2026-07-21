@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "scentai-web",
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-07-20",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist/",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "single-page-application"
+  },
+  "vars": {
+    "SCENTAI_API_URL": "https://m-sefa-soysal--scentai-stage6-web.modal.run"
+  },
+  "secrets": {
+    "required": ["SCENTAI_API_KEY"]
+  },
+  "ratelimits": [
+    {
+      "name": "CHAT_RATE_LIMITER",
+      "namespace_id": "725001",
+      "simple": { "limit": 6, "period": 60 }
+    },
+    {
+      "name": "WARMUP_RATE_LIMITER",
+      "namespace_id": "725002",
+      "simple": { "limit": 3, "period": 60 }
+    },
+    {
+      "name": "POLL_RATE_LIMITER",
+      "namespace_id": "725003",
+      "simple": { "limit": 180, "period": 60 }
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

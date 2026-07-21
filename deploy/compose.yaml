@@ -1,0 +1,90 @@
+name: scentai
+
+services:
+  model:
+    build:
+      context: ..
+      dockerfile: deploy/model.Dockerfile
+    environment:
+      SCENTAI_BASE_MODEL: ${SCENTAI_BASE_MODEL:-google/gemma-4-12B-it}
+      SCENTAI_LORA_NAME: ${SCENTAI_LORA_NAME:-scentai}
+      SCENTAI_ADAPTER_DIR: /models/scentai
+      SCENTAI_MAX_MODEL_LEN: ${SCENTAI_MAX_MODEL_LEN:-4096}
+      SCENTAI_MAX_LORA_RANK: ${SCENTAI_MAX_LORA_RANK:-16}
+      SCENTAI_GPU_MEMORY_UTILIZATION: ${SCENTAI_GPU_MEMORY_UTILIZATION:-0.65}
+      HF_TOKEN: ${HF_TOKEN:-}
+      HF_HOME: /cache/huggingface
+    volumes:
+      - ${SCENTAI_ADAPTER_HOST_DIR:?Set SCENTAI_ADAPTER_HOST_DIR in deploy/.env}:/models/scentai:ro
+      - ${SCENTAI_HF_CACHE_DIR:-./.cache/huggingface}:/cache/huggingface
+    shm_size: 16gb
+    expose:
+      - "8010"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8010/v1/models', timeout=5)"]
+      interval: 15s
+      timeout: 8s
+      retries: 80
+      start_period: 20m
+    restart: unless-stopped
+
+  retrieval:
+    build:
+      context: ..
+      dockerfile: deploy/retrieval.Dockerfile
+    environment:
+      SCENTAI_CHROMA_DIR: /data/chroma_db_bge_m3
+      SCENTAI_CATALOG_PATH: /data/scentai_catalog.sqlite3
+      SCENTAI_RETRIEVAL_MAX_CONCURRENCY: ${SCENTAI_RETRIEVAL_MAX_CONCURRENCY:-1}
+    user: ${SCENTAI_RUNTIME_UID:-1000}:${SCENTAI_RUNTIME_GID:-1000}
+    volumes:
+      - ${SCENTAI_CHROMA_HOST_DIR:-../chroma_db_bge_m3}:/data/chroma_db_bge_m3
+      - ${SCENTAI_CATALOG_HOST_PATH:-../scentai_catalog.sqlite3}:/data/scentai_catalog.sqlite3:ro
+      - ${SCENTAI_HF_CACHE_DIR:-./.cache/huggingface}:/cache/huggingface
+    expose:
+      - "8020"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8020/health', timeout=5)"]
+      interval: 20s
+      timeout: 8s
+      retries: 30
+      start_period: 10m
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/api.Dockerfile
+    environment:
+      SCENTAI_MODEL_URL: http://model:8010
+      SCENTAI_RETRIEVAL_URL: http://retrieval:8020
+      SCENTAI_BASE_MODEL: ${SCENTAI_BASE_MODEL:-google/gemma-4-12B-it}
+      SCENTAI_LORA_NAME: ${SCENTAI_LORA_NAME:-scentai}
+      SCENTAI_MODEL_TIMEOUT_SECONDS: ${SCENTAI_MODEL_TIMEOUT_SECONDS:-180}
+      SCENTAI_RETRIEVAL_TIMEOUT_SECONDS: ${SCENTAI_RETRIEVAL_TIMEOUT_SECONDS:-45}
+      SCENTAI_SESSION_TTL_SECONDS: ${SCENTAI_SESSION_TTL_SECONDS:-3600}
+      SCENTAI_MAX_SESSIONS: ${SCENTAI_MAX_SESSIONS:-1000}
+      SCENTAI_REQUEST_WORKER_THREADS: ${SCENTAI_REQUEST_WORKER_THREADS:-16}
+      SCENTAI_API_KEY: ${SCENTAI_API_KEY:-}
+      SCENTAI_CORS_ORIGINS: ${SCENTAI_CORS_ORIGINS:-}
+      SCENTAI_EXPOSE_DEBUG: ${SCENTAI_EXPOSE_DEBUG:-false}
+    depends_on:
+      model:
+        condition: service_healthy
+      retrieval:
+        condition: service_healthy
+    ports:
+      - "${SCENTAI_API_PORT:-8080}:8080"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health/ready', timeout=5)"]
+      interval: 15s
+      timeout: 8s
+      retries: 10
+    restart: unless-stopped

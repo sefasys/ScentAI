@@ -1,0 +1,68 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+*api_key*.txt
+*apikey*.txt
+*secret*.txt
+*token*.txt
+key.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+*.egg-info/
+
+# JavaScript and Cloudflare
+node_modules/
+dist/
+.wrangler/
+*.tsbuildinfo
+
+# Models and generated ML artifacts
+models/
+checkpoints/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Data, indexes, and generated outputs
+chroma_db*/
+*.sqlite
+*.sqlite3
+*.db
+train_set/
+runs/
+results*/
+reports/
+*.jsonl
+!evaluation/*.jsonl
+!research/evaluation/*.jsonl
+*.csv
+!evaluation/*.csv
+
+# Archives and local media
+*.zip
+*.tar
+*.tar.gz
+*.7z
+screenshots/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*.swp
+

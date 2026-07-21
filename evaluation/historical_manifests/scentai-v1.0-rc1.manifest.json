@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "release": "scentai-v1.0-rc1",
+  "frozen_at_utc": "2026-07-19T09:19:17.098688+00:00",
+  "model": {
+    "base_model": "google/gemma-4-12B-it",
+    "planner_model": "google/gemma-4-12B-it",
+    "first_answer_model": "google/gemma-4-12B-it",
+    "repair_model": "scentai",
+    "inference": "vLLM 0.25.1, BF16, dynamic LoRA",
+    "adapter": {
+      "external_artifact_required": true,
+      "evaluated_path": null,
+      "required_files": [
+        "adapter_config.json",
+        "adapter_model.safetensors"
+      ],
+      "expected_rank": 16,
+      "expected_use_dora": false,
+      "expected_target_modules": [
+        "down_proj",
+        "gate_proj",
+        "k_proj",
+        "o_proj",
+        "q_proj",
+        "up_proj",
+        "v_proj"
+      ],
+      "note": "The full V4 adapter is stored in Drive and must be mounted at deployment time."
+    }
+  },
+  "retrieval": {
+    "embedding_model": "BAAI/bge-m3",
+    "collection": "scentai_perfumes",
+    "catalog": {
+      "integrity_check": "ok",
+      "perfumes": 131930,
+      "similarity_edges": 692729
+    }
+  },
+  "acceptance": {
+    "evaluation": "final_eval_v1_pipeline_v4",
+    "case_count": 120,
+    "pass_count": 120,
+    "metrics": {
+      "overall_pass_rate": 1.0,
+      "language_pass_rate": 1.0,
+      "requested_count_pass_rate": 1.0,
+      "hard_filter_pass_rate": 1.0,
+      "hard_filter_plan_pass_rate": 1.0,
+      "hard_filter_output_pass_rate": 1.0,
+      "entity_resolution_pass_rate": 1.0,
+      "unsupported_route_pass_rate": 1.0,
+      "conversation_no_repeat_pass_rate": 1.0,
+      "performance_calibration_pass_rate": 1.0,
+      "first_attempt_rate": 0.9091,
+      "fallback_rate": 0.0667,
+      "average_latency_seconds": 9.2685,
+      "p50_latency_seconds": 9.4306,
+      "p95_latency_seconds": 14.291,
+      "max_latency_seconds": 21.3369
+    },
+    "all_functional_gates_passed": true,
+    "accepted_exception": {
+      "gate": "fallback_rate",
+      "observed": 0.0667,
+      "threshold": 0.05,
+      "reason": "8 safe deterministic fallbacks; no grounding, filter, language, or contract failure."
+    }
+  },
+  "files": [
+    {
+      "path": "src/scentai/orchestrator.py",
+      "bytes": 88815,
+      "sha256": "00b8f30c0a98054054d59fb9b9e9dfd52709851bd05816adb22cdb9a6bcc2bd0"
+    },
+    {
+      "path": "src/scentai/retrieval.py",
+      "bytes": 44662,
+      "sha256": "2d6a8adaaa9582265c3c21d82a388994bc1a6455f394255242743984c043e776"
+    },
+    {
+      "path": "notebooks/full_pipeline_colab.ipynb",
+      "bytes": 276240,
+      "sha256": "1cb308441c9afda8da52650c7680e5ba12ac2de03d853142abc713a85fd5990d"
+    },
+    {
+      "path": "final_eval_v1_pipeline_v4/final_eval_v1.jsonl",
+      "bytes": 43001,
+      "sha256": "b7078893cc8e67ae756a7bcc8c2188b869572638ff563e064ae9361d5691e48b"
+    },
+    {
+      "path": "final_eval_v1_pipeline_v4/final_eval_outputs.jsonl",
+      "bytes": 1428242,
+      "sha256": "7b7a8db77d0fb5f79a1408c4ebd04270f689e51afc08f13281bccb71d8f89f46"
+    },
+    {
+      "path": "final_eval_v1_pipeline_v4/final_eval_summary.json",
+      "bytes": 3969,
+      "sha256": "2cc1b7be12b77ba42e6a4e4d41f4cf71629981cc24f6222976af3a0736710863"
+    },
+    {
+      "path": "final_eval_v1_pipeline_v4/final_eval_metadata.json",
+      "bytes": 1326,
+      "sha256": "384b05243ab72cb19c29c4b76d58acad0e32a7b785e7be864d1752f973d10a98"
+    },
+    {
+      "path": "scentai_catalog.sqlite3",
+      "bytes": 98459648,
+      "sha256": "10be916b45cf5de2d5f8a90a381590008227da9cd5bc83f6b024c79edfa5e033"
+    },
+    {
+      "path": "deploy/api.Dockerfile",
+      "bytes": 586,
+      "sha256": "1d3d2a66e2be00bcf7eeab120afe517824af32e6bd059016f4bbcedb5444f4f1"
+    },
+    {
+      "path": "deploy/model.Dockerfile",
+      "bytes": 167,
+      "sha256": "5831f7d923ae6c4fca205d9031397c06940a7a71fe8d96c81857fbf02d48be45"
+    },
+    {
+      "path": "deploy/retrieval.Dockerfile",
+      "bytes": 952,
+      "sha256": "0079570fdd88c2ca876c66df46af72be265fecf029fc11b8eb2c9a3446bbd6dd"
+    },
+    {
+      "path": "deploy/compose.yaml",
+      "bytes": 3354,
+      "sha256": "e6b4be16552631da3793c54dbee2019a56b35d4c97f90d74bbf1d0876ddeb96b"
+    },
+    {
+      "path": "deploy/requirements-api.txt",
+      "bytes": 61,
+      "sha256": "e804bdebfe50ca27f6cde829c7b292cc9aae5285bb78ba5e00d208b0f03a21c9"
+    },
+    {
+      "path": "deploy/requirements-retrieval.txt",
+      "bytes": 106,
+      "sha256": "21e994d00cfe7d92da2454a8baee99475741021b082b6f914f2a896d5f371587"
+    },
+    {
+      "path": "deploy/model_server/entrypoint.py",
+      "bytes": 3494,
+      "sha256": "f60172dbb550b34cb8ab31a723831ddbd0e45d41b0f2334cb00e14ca55f4291a"
+    },
+    {
+      "path": "deploy/scripts/freeze_release.py",
+      "bytes": 5943,
+      "sha256": "b3e6f23b6db5b09e147536a85dc1045a44c10704b45706bab7dbdf9d47d7b1a7"
+    },
+    {
+      "path": "deploy/scripts/http_smoke_retrieval.py",
+      "bytes": 3176,
+      "sha256": "b0b0ab4d8054b54ec560457effe5885bcd11e105e4ec1432a6660c230c8b5991"
+    },
+    {
+      "path": "deploy/scripts/smoke_retrieval.py",
+      "bytes": 1755,
+      "sha256": "2b507c64a3956e49800a2ea6b77addf2ac91b1b1696e86f5a7d2ab88e55a55dc"
+    },
+    {
+      "path": "deploy/scripts/verify_release.py",
+      "bytes": 3718,
+      "sha256": "199cb08087d62f6f8f8f3386c0b2f945d3f0ee58453aca8c4a030992e3847313"
+    },
+    {
+      "path": "deploy/src/scentai_deploy/__init__.py",
+      "bytes": 90,
+      "sha256": "27ccac6a4be197236d781b9d0643cde720bdc6a15f1f561eab3f7731405ce2d6"
+    },
+    {
+      "path": "deploy/src/scentai_deploy/api.py",
+      "bytes": 5702,
+      "sha256": "10f490da70ffa511563c277f4d6b2e3bc85c5c993b02596ab66af429405c98b4"
+    },
+    {
+      "path": "deploy/src/scentai_deploy/config.py",
+      "bytes": 3379,
+      "sha256": "673ec476489b71d2c97580bc32806ee79ae9df1ee2ffd89cd00c23566fb3a3b7"
+    },
+    {
+      "path": "deploy/src/scentai_deploy/retrieval_api.py",
+      "bytes": 3454,
+      "sha256": "f19e7cabc5042434cd67f8171288528228246895737a098bd94627eafed53b55"
+    },
+    {
+      "path": "deploy/src/scentai_deploy/runtime.py",
+      "bytes": 3030,
+      "sha256": "f30768561012076b455e93e849efc37c12358922b3104179f396f2d08abc20e1"
+    },
+    {
+      "path": "deploy/src/scentai_deploy/schemas.py",
+      "bytes": 2075,
+      "sha256": "cf1baab7b4087e0ccf923d2b7698eeb7e3d16653be73e21bd730569c6fc5f923"
+    },
+    {
+      "path": "deploy/src/scentai_deploy/sessions.py",
+      "bytes": 3245,
+      "sha256": "91ecb8b0446203223838e77c44749387750c0acc0aa4bd212b5d3c7688b28dd2"
+    },
+    {
+      "path": "deploy/release/acceptance.md",
+      "bytes": 825,
+      "sha256": "ff54f7abad87c9d6df45fdac84e27d9dbdeba39f296d08f2a1dd576cf63e1902"
+    },
+    {
+      "path": "deploy/release/release_history.md",
+      "bytes": 1521,
+      "sha256": "95a21e75ed9c6fde75d0eca4bccf3ba34404c845363880937027deecff095fa5"
+    }
+  ],
+  "directories": [
+    {
+      "path": "chroma_db_bge_m3",
+      "bytes": 1564995220,
+      "file_count": 6,
+      "tree_sha256": "444525bed295081aa345635df8714077e200cc3f4a1d5b424c9c0df1a84ae5a0",
+      "files": [
+        {
+          "path": "chroma_db_bge_m3/305b70f4-16c8-4b1c-bd72-26611a3b5ca1/data_level0.bin",
+          "bytes": 558855480,
+          "sha256": "220c5377c2f85e235d5c8d85bcdb6fc54a9359a0e0a570a00596d2de01e85421"
+        },
+        {
+          "path": "chroma_db_bge_m3/305b70f4-16c8-4b1c-bd72-26611a3b5ca1/header.bin",
+          "bytes": 100,
+          "sha256": "507fa3401066a23a82e65d019fed7597016f3729445ffdfb6da5719d0a17cf21"
+        },
+        {
+          "path": "chroma_db_bge_m3/305b70f4-16c8-4b1c-bd72-26611a3b5ca1/index_metadata.pickle",
+          "bytes": 4004948,
+          "sha256": "08267dd159ced2bea305e30bd1420dd4c5dabf8d12035e40009ecff76bfa2287"
+        },
+        {
+          "path": "chroma_db_bge_m3/305b70f4-16c8-4b1c-bd72-26611a3b5ca1/length.bin",
+          "bytes": 527720,
+          "sha256": "57bfc9bf92354559a477cdb60dd50316d6770bcf216615b74ed94b18692f70e5"
+        },
+        {
+          "path": "chroma_db_bge_m3/305b70f4-16c8-4b1c-bd72-26611a3b5ca1/link_lists.bin",
+          "bytes": 1122108,
+          "sha256": "0be57273d6b671602a3e3a077ef5e3d65d101f8eea1de14a3e1c54bcd6ae825a"
+        },
+        {
+          "path": "chroma_db_bge_m3/chroma.sqlite3",
+          "bytes": 1000484864,
+          "sha256": "2aa582ba7c0b690788b9a7f35b7a95e1d5bea499c17c542a7023a2a8253405df"
+        }
+      ]
+    }
+  ]
+}

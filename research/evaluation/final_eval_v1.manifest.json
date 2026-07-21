@@ -1,0 +1,22 @@
+{
+  "version": "final_eval_v1",
+  "case_count": 120,
+  "category_counts": {
+    "recommendation": 20,
+    "perfume_profile": 15,
+    "comparison": 15,
+    "similarity_alternative": 15,
+    "hard_filters": 15,
+    "entity_resolution": 10,
+    "conversation": 10,
+    "unsupported": 10,
+    "multilingual_noisy": 10
+  },
+  "language_counts": {
+    "en": 61,
+    "tr": 59
+  },
+  "session_count": 5,
+  "catalog": "scentai_catalog.sqlite3",
+  "expected_catalog_label_count": 32
+}

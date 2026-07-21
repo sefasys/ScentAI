@@ -1,0 +1,270 @@
+id,category,language,query,answer,candidate_labels,route,latency_seconds,auto_pass,auto_failures,grounding_1_5,technical_accuracy_1_5,advisor_value_1_5,naturalness_1_5,review_notes
+fev1_cmp_001,comparison,en,"Compare Club de Nuit by Armaf with Team Five by Adidas for vibe, performance, and use.","Choosing between these two depends entirely on whether you want a fragrance that commands attention or one that stays quietly in the background.
+
+1. Club de Nuit Intense Man by Armaf offers a bold, complex identity defined by smoky, leathery, and fruity undertones. Because it possesses strong longevity and a noticeable sillage, it is built for situations where you want your presence felt throughout the day or night. It transitions well across spring, summer, and autumn, making it a versatile powerhouse for someone seeking a more assertive, sophisticated aura.
+
+2. Team Five by Adidas provides a much more understated experience, leaning into a crisp, green, and herbal profile. With its light longevity and restrained sillage, this is a practical choice for casual daytime wear in the spring or summer when you prefer a clean, minty freshness that won't overwhelm your personal space. It serves as a subtle companion rather than a statement piece.
+
+If you need a fragrance that lasts through a long day and projects a mature, smoky character, Club de Nuit Intense Man by Armaf is the definitive choice. However, for a low-key, refreshing scent for the gym or a quick errand, Team Five by Adidas is the more modest option.",Club de Nuit Intense Man by Armaf | Team Five by Adidas,llm_grounded_comparison,10.1825,True,,,,,,
+fev1_conv_001,conversation,en,Recommend exactly 3 popular fragrances that must have vanilla.,"Since you are looking for popular vanilla fragrances, the selection depends on whether you prefer a cozy, gourmand warmth or a more sophisticated, spicy edge.
+
+1. Tobacco Vanille by Tom Ford offers a dense, opulent experience where vanilla meets the rugged texture of tobacco and cacao. It feels like a heavy, winter coat for the senses, leaning into a warm spicy and woody profile that suits evening wear or cold weather perfectly.
+
+2. Le Male Elixir by Jean Paul Gaultier provides a much sweeter, more contemporary direction by blending vanilla with honey and aromatic notes like mint and lavender. This choice is ideal if you want a vibrant, syrupy sweetness that maintains a masculine, aromatic backbone.
+
+3. Angels' Share by By Kilian serves as a distinctively boozy alternative, centering on a mix of cinnamon, candied almond, and vanilla. It captures a nutty, praline-heavy vibe that feels more like a decadent dessert than a traditional perfume, making it a great pick for a characterful, festive presence.
+
+If you want something classic and bold, Tobacco Vanille is the most substantial choice; however, for a sweeter, more modern appeal, Le Male Elixir is the way to go.",Tobacco Vanille by Tom Ford | The Most Wanted Parfum by Azzaro | Coco Mademoiselle by Chanel | By the Fireplace by Maison Martin Margiela | Le Male Le Parfum by Jean Paul Gaultier | Le Male Elixir by Jean Paul Gaultier | Angels' Share by By Kilian | Hypnotic Poison by Dior,llm_grounded,5.5547,True,,,,,,
+fev1_entity_001,entity_resolution,tr,Club de Nuit by Armaf nasıl bir parfüm?,"Club de Nuit Intense Man by Armaf, karakteri oldukça belirgin ve çok yönlü bir koku profili sunuyor. İçeriğindeki deri, tütsü ve meyvemsi dokuların birleşimi, onu hem maskülen hem de enerjik bir noktaya taşıyor. Özellikle bergamot ve limon gibi taze başlangıçların ardından gelen ananas ve armut gibi meyvemsi esintiler, parfümün dinamik yapısını oluşturuyor.
+
+Bu parfümün performansı oldukça tatmin edici; güçlü kalıcılığı ve fark edilir yayılımı sayesinde gün boyu etkisini koruyabiliyor. Bahar, yaz ve sonbahar aylarında hem gündüz hem de gece kullanımına uygun bir esnekliğe sahip. Deri ve odunsu alt tonların tatlılık ve aromatik notalarla dengelenmesi, onu hem ciddi ortamlarda hem de sosyal etkinliklerde kullanılabilecek güçlü bir seçenek haline getiriyor.
+
+Eğer hem taze bir açılış hem de kalıcı, karakterli bir derinlik arıyorsanız, Club de Nuit Intense Man beklentilerinizi karşılayacak bir yoğunluk sunacaktır.",Club de Nuit Intense Man by Armaf,llm_grounded_profile,7.5918,True,,,,,,
+fev1_filter_001,hard_filters,en,"Recommend exactly 3 office fragrances with no vanilla, oud, or smoky accords.","For a professional office environment, the goal is to project competence and cleanliness without overwhelming your colleagues. Since you want to avoid vanilla, oud, and smoky notes, we can focus on crisp citrus, sophisticated florals, and earthy woods.
+
+1. Imagination by Louis Vuitton offers a refined, high-end experience that feels incredibly polished. The combination of Nigerian ginger and black tea provides a sophisticated, airy freshness that remains professional throughout the day. It is an excellent choice if you want a fragrance that feels modern and meticulously crafted.
+
+2. Terre d'Hermès by Hermès serves as a grounded, authoritative alternative for a more serious atmosphere. Its earthy profile, built around flint and orange, creates a sturdy and reliable presence that commands respect. This is the more characterful direction for someone who prefers a dry, mineral-leaning scent over a purely floral or fruity one.
+
+3. Versace Pour Homme by Versace provides the safest and most versatile option for a standard workday. It leans into a bright, aromatic profile with neroli and lemon, ensuring you smell clean and approachable. While it lacks the complexity of the others, its straightforward freshness makes it a reliable staple for high-heat days or busy office settings.
+
+If you prefer a sharp, modern edge, go with Imagination; for a classic, grounded authority, choose Terre d'Hermès.",Versace Pour Homme by Versace | Y Eau de Parfum by Yves Saint Laurent | The One for Men Eau de Parfum by Dolce&Gabbana | Dior Homme Intense 2011 by Dior | Imagination by Louis Vuitton | Supremacy Collector's Edition Pour Homme by Afnan | Terre d'Hermès by Hermès | London for Men by Burberry,llm_grounded,9.7554,True,,,,,,
+fev1_noisy_001,multilingual_noisy,tr,bna yaz icin ferah tam 3 erkek parfumu oner,"Yaz sıcaklarında ferahlık arayışınız için karakterleri birbirinden net şekilde ayrılan üç farklı seçenek hazırladım.
+
+1. Imagination by Louis Vuitton, seçkin ve sofistike bir duruş sergilemek istediğiniz anlar için ideal bir tercih. İçeriğindeki Çin siyah çayı ve zencefil dokunuşları, klasik narenciye ferahlığını çok daha derin ve kaliteli bir boyuta taşıyor; hem gündüz hem gece kullanımına uygun yapısıyla oldukça çok yönlü bir karakter sunuyor.
+
+2. Versace Pour Homme, daha temiz, sabunsu ve güvenli bir ferahlık arayanlar için en dengeli seçenek olarak öne çıkıyor. Neroli ve bergamot ağırlıklı yapısı, özellikle gündüz saatlerinde sizi taze tutacak, çiçeksi ve muskümsü notalarla yumuşatılmış klasik bir temizlik hissi veriyor.
+
+3. Hawas for Him by Rasasi, diğerlerine göre daha enerjik ve meyvemsi bir dinamizm arayanlara hitap ediyor. İçindeki elma ve armut gibi meyve notalarıyla sucul ve tatlı bir ferahlık sunarken, sıcak yaz günlerinde daha canlı ve dikkat çekici bir iz bırakmak isteyenler için uygun bir tercih olabilir.
+
+Eğer çok zarif ve kaliteli bir imza arıyorsanız Imagination; her ortama uyum sağlayacak güvenli bir temizlik istiyorsanız Versace Pour Homme; daha enerjik ve meyvemsi bir hava için ise Hawas for Him doğru tercih olacaktır.",Versace Pour Homme by Versace | Imagination by Louis Vuitton | Versace Man Eau Fraiche by Versace | Y Eau de Parfum by Yves Saint Laurent | Allure Homme Sport by Chanel | Hawas for Him by Rasasi | L'Homme by Yves Saint Laurent | Aventus by Creed,llm_grounded,11.1634,True,,,,,,
+fev1_profile_001,perfume_profile,tr,Turkish Leather by Pryn Parfum nasıl bir parfüm? Karakterini ve performansını anlat.,"Turkish Leather by Pryn Parfum, adından da anlaşılacağı üzere oldukça karakterli ve derinlikli bir yapı sunuyor. Deri ve hayvansı dokuların üzerine yerleşen kakao, loukhoum ve rakı gibi özgün detaylar, parfüme hem mistik hem de iştah açıcı bir sıcaklık katıyor. Baharatlı ve tütsülü esintilerle birleşen bu yoğun kompozisyon, özellikle kış ve sonbahar aylarında, gündüz veya gece fark etmeksizin belirgin bir duruş sergiliyor.
+
+Performans açısından oldukça iddialı bir seçenek olan bu koku, katalogdaki en güçlü kalıcılık değerlerinden birine sahip. Yayılımı ise çevreniz tarafından fark edilecek kadar güçlü bir seviyede seyrediyor. Eğer teninizde uzun süre kalıcı, karakteri net ve etkileyici bir iz bırakan bir koku arıyorsanız, Turkish Leather bu beklentiyi fazlasıyla karşılayacaktır.
+
+Daha ağır ve baskın bir imza kokusu arayışındaysanız bu parfüme yönelebilirsiniz.",Turkish Leather by Pryn Parfum,llm_grounded_profile,8.5329,True,,,,,,
+fev1_rec_001,recommendation,en,I need exactly 3 clean professional office fragrances without vanilla.,"To project a polished, professional image in an office environment, you need a balance of freshness and restraint. Since you are looking for a clean aesthetic without vanilla, these three selections offer distinct ways to approach that ""buttoned-up"" vibe.
+
+1. Versace Pour Homme by Versace serves as the quintessential safe choice for a bright, airy workspace. Its blend of neroli and musk creates a soapy, floral freshness that feels incredibly tidy and approachable. Because it leans into citrus and green accords, it provides a crisp start to the day that won't overwhelm your colleagues.
+
+2. Imagination by Louis Vuitton offers a more sophisticated, elevated take on the ""clean"" category by incorporating a distinct tea note. While it maintains the citrus and aromatic profile necessary for a professional setting, the addition of Chinese black tea and ginger gives it a refined, slightly more complex character than a standard aquatic.
+
+3. Y Eau de Parfum by Yves Saint Laurent provides a sharper, more modern edge for those who prefer a ""clean"" scent with a bit of bite. It utilizes ginger and sage to create a spicy, aromatic freshness that feels energetic and sharp. It is a great option if you want to appear alert and dynamic rather than just relaxed.
+
+If you want to be as subtle as possible, Versace Pour Homme is your best bet; however, for a more unique and high-end signature, Imagination is the superior choice.",Versace Pour Homme by Versace | Y Eau de Parfum by Yves Saint Laurent | Imagination by Louis Vuitton | Dior Homme Intense 2011 by Dior | The One for Men Eau de Parfum by Dolce&Gabbana | Terre d'Hermès by Hermès | Versace Man Eau Fraiche by Versace | Another 13 by Le Labo,llm_grounded,9.4624,True,,,,,,
+fev1_sim_001,similarity_alternative,en,I want exactly 3 fragrances similar to Aventus by Creed but less smoky.,"To capture the DNA of Aventus while moving away from its heavy smoke, you need fragrances that prioritize the juicy fruit, crisp citrus, and woody backbone.
+
+1. Club de Nuit Intense Man Limited Edition Parfum by Armaf offers a high-impact alternative that leans into the fruity and woody facets with a very strong presence. It provides a noticeable sillage and strong longevity, making it the most assertive choice if you want the recognizable Aventus vibe with a more prominent amber and citrus profile.
+
+2. Supremacy Not Only Intense by Afnan serves as a powerful, characterful direction that emphasizes a rich, earthy, and fruity composition. Because it features a strong longevity and noticeable sillage, it delivers a dense, sophisticated experience that feels substantial without relying on the specific smoky notes you are looking to avoid.
+
+3. Explorer by Montblanc provides a more restrained and versatile option for daily wear. While it shares the fresh spicy and woody characteristics of the original, its moderate-restrained sillage makes it a safer, more subtle choice for professional settings where you want a clean, woody trail rather than a bold statement.
+
+If you want maximum presence, go with Supremacy Not Only Intense; for a balanced, everyday signature, Explorer is the most understated path.",Club de Nuit Intense Man Limited Edition Parfum by Armaf | Rumz Al Rasasi 9325 Pour Lui by Rasasi | Explorer by Montblanc | L'Aventure by Al Haramain Perfumes | Supremacy Not Only Intense by Afnan | Absolu Aventus 2023 by Creed | Esencia pour Homme Eau de Parfum by Loewe | Morning Chess by Vilhelm Parfumerie,llm_grounded_similarity,8.3586,True,,,,,,
+fev1_unsupported_001,unsupported,en,What is the current price of Aventus by Creed?,"I do not have a live price source, so I cannot safely answer current price or budget questions.",,unsupported_price,2.0587,True,,,,,,
+fev1_cmp_002,comparison,tr,Burberry Hero ile Tobacco Vanille by Tom Ford'u karakter ve kullanım açısından karşılaştır.,"Bu iki parfüm, karakter ve performans açısından birbirine zıt uçlarda yer alan, tamamen farklı kullanım senaryolarına hitap eden seçenekler.
+
+1. Burberry Hero, taze ve aromatik bir yapı sunarak daha dinamik, modern bir duruş sergiliyor. Bergamot ve çeşitli sedir ağacı notalarının birleşimiyle ortaya çıkan bu koku; bahar ve yaz aylarında, gündüz kullanımında ferahlatıcı bir eşlikçi arayanlar için ideal. Performans değerleri katalog ortalamasının altında kaldığı için, daha sakin ve kişisel bir alan yaratan, ""temiz ve odunsu"" bir imza arayışında olanlar için güvenli bir liman sunuyor.
+
+2. Tom Ford Tobacco Vanille ise çok daha yoğun, tatlı ve baskın bir karakterle öne çıkıyor. Tütün yaprağı, vanilya ve kakao gibi sıcak notaların hakimiyeti, onu özellikle kış ve sonbahar aylarına, gece kullanımına uygun bir koku haline getiriyor. Katalogdaki en güçlü kalıcılık ve fark edilebilir yayılım değerlerine sahip olması, bu parfümü kalabalık ortamlarda veya soğuk havalarda karakterini güçlü bir şekilde hissettirmek isteyenler için uygun kılıyor.
+
+Eğer daha hafif, günlük ve taze bir seçenek arıyorsanız Burberry Hero; ancak kış aylarına uygun, kalıcılığı yüksek ve baskın bir tatlılık arıyorsanız Tobacco Vanille doğru tercih olacaktır.",Hero by Burberry | Tobacco Vanille by Tom Ford,llm_grounded_comparison,9.3827,True,,,,,,
+fev1_conv_002,conversation,en,Give me three different options under the same requirements.,"Since you are looking for popular vanilla fragrances, I have selected three distinct profiles that offer very different ways to experience that signature sweetness.
+
+1. The Most Wanted Parfum by Azzaro provides a bold, masculine take on vanilla that leans into a bourbon vanilla character. It balances the sweetness with fresh spicy and citrus notes, making it a versatile choice for both day and night wear during the colder months.
+
+2. By the Fireplace by Maison Martin Margiela offers a more atmospheric, unisex experience that feels like a cozy winter evening. Instead of a traditional gourmand, it uses vanilla alongside nutty and balsamic accords to create a smoky, warm sensation reminiscent of a crackling hearth.
+
+3. Hypnotic Poison by Dior serves as the classic, feminine alternative for those who prefer a creamy and dense sweetness. It pairs vanilla with coconut and almond to create a powdery, fruity profile that feels much more opulent and rounded than the spicy or smoky options above.
+
+If you want something versatile and modern, The Most Wanted Parfum by Azzaro is the safer bet, whereas By the Fireplace is the more characterful choice for a unique, cozy vibe.",The Most Wanted Parfum by Azzaro | Coco Mademoiselle by Chanel | By the Fireplace by Maison Martin Margiela | Le Male Le Parfum by Jean Paul Gaultier | Hypnotic Poison by Dior | Vanilla | 28 by Kayali Fragrances | Layton by Parfums de Marly | Emporio Armani Stronger With You Intensely by Giorgio Armani,llm_grounded,7.6274,True,,,,,,
+fev1_entity_002,entity_resolution,en,Tell me about Aventus by Creed.,"Aventus by Creed is a multifaceted fragrance that balances sharp, fresh openings with a deeper, more rugged core. It opens with a vibrant burst of citrus and fruit, specifically pineapple and apple, which quickly transitions into a complex blend of smoky and woody elements. The presence of birch and oak moss provides a masculine, leathery texture, while the musk and ambroxan ensure the scent remains smooth rather than harsh.
+
+Because it captures both fruity sweetness and smoky woodiness, this fragrance is highly versatile for various settings. It performs well across spring, summer, and autumn, making it suitable for both daytime professional environments and evening social gatherings. With moderate longevity and sillage, it maintains a noticeable presence without overwhelming your personal space. It is a classic choice for someone seeking a sophisticated, authoritative identity that feels both polished and powerful.",Aventus by Creed,llm_grounded_profile,5.7636,True,,,,,,
+fev1_filter_002,hard_filters,tr,Date akşamı için vanilya mutlaka bulunan ama tütün içermeyen tam 3 parfüm öner.,"Romantik bir akşam için vanilyanın sıcaklığını tütün notası olmadan arıyorsanız, farklı karakterlerde üç seçenek öne çıkıyor.
+
+1. Bianco Latte by Giardini Di Toscana, aradığınız o yoğun ve tatlı gece atmosferini en doğrudan karşılayan seçenek olabilir; bal, karamel ve vanilyanın birleşimiyle adeta iştah kabartan, pudralı ve kremsi bir yapı sunuyor.
+2. Coco Mademoiselle by Chanel, vanilyayı daha sofistike ve çiçeksi bir çerçeveye oturtarak akşamın zarafetine eşlik ediyor; gül ve beyaz çiçeklerle harmanlanan bu koku, tatlılığın yanına topraklı ve odunsu bir derinlik ekleyerek daha dengeli bir karakter sergiliyor.
+3. By the Fireplace by Maison Martin Margiela, vanilyayı daha karakteristik ve sıcak bir hikayeyle sunarak sizi bir şömine başındaymışsınız gibi hissettirebilir; kestane ve baharat dokunuşlarıyla birleşen bu koku, diğerlerine göre daha belirgin ve atmosferik bir sıcaklık vaat ediyor.
+
+Eğer çok tatlı ve kremsi bir çekicilik istiyorsanız Bianco Latte, daha klasik ve çiçeksi bir şıklık için Coco Mademoiselle, ise daha özgün ve sıcak bir hava için By the Fireplace doğru tercih olacaktır.",Coco Mademoiselle by Chanel | Vanilla | 28 by Kayali Fragrances | Coconut Passion by Victoria's Secret | Bianco Latte by Giardini Di Toscana | Althaïr by Parfums de Marly | The Most Wanted Parfum by Azzaro | By the Fireplace by Maison Martin Margiela | Amber Romance by Victoria's Secret,llm_grounded,12.0192,True,,,,,,
+fev1_noisy_002,multilingual_noisy,en,need exactly 3 ofice scents no vanila pls,"For a professional office environment, the goal is to find a balance between presence and restraint, ensuring you remain approachable while maintaining a polished image.
+
+1. Imagination by Louis Vuitton offers a sophisticated, airy experience that feels incredibly clean and modern. The combination of citrus, ginger, and black tea creates a refined atmosphere that is perfect for a high-energy workspace during the spring or summer months.
+
+2. Y Eau de Parfum by Yves Saint Laurent serves as a versatile, sharp alternative that leans into a more aromatic and herbal profile. It provides a crisp, spicy freshness that transitions seamlessly from a morning meeting to an evening commitment, making it a reliable daily driver for various seasons.
+
+3. Terre d'Hermès by Hermès provides a more grounded, earthy direction for those who prefer a mature and authoritative presence. Its distinct flinty and woody character offers a sense of stability and professionalism that stands out from typical fresh scents without being overwhelming.
+
+If you prefer a bright, tea-infused elegance, Imagination is the most distinctive choice; however, Terre d'Hermès is the safer bet for a classic, commanding office presence.",Versace Pour Homme by Versace | Y Eau de Parfum by Yves Saint Laurent | The One for Men Eau de Parfum by Dolce&Gabbana | Dior Homme Intense 2011 by Dior | Imagination by Louis Vuitton | Terre d'Hermès by Hermès | London for Men by Burberry | The Most Wanted by Azzaro,llm_grounded,7.44,True,,,,,,
+fev1_profile_002,perfume_profile,en,What is Tobacco Vanille by Tom Ford like? Explain its character and performance.,"Tobacco Vanille by Tom Ford is a dense, opulent composition that leans heavily into a cozy yet sophisticated atmosphere. It centers on a rich interplay between sweet vanilla and earthy tobacco, rounded out by nuances of cacao and dried fruits. The presence of warm spicy and powdery accords gives it a velvety texture, making it feel substantial and enveloping rather than sharp. Because of its heavy, gourmand-leaning profile, it is best suited for the cooler temperatures of autumn and winter, where its warmth can truly resonate.
+
+In terms of presence, you can expect a strong performance that holds its own throughout the day or night. Its sillage is noticeable, ensuring that the scent leaves a clear impression without being overwhelming. This makes it a reliable choice for occasions where you want a fragrance to linger and project a sense of luxury and depth. It is a characterful, bold selection that favors a cozy, high-impact aesthetic over subtle transparency.",Tobacco Vanille by Tom Ford,llm_grounded_profile,7.3295,True,,,,,,
+fev1_rec_002,recommendation,tr,Date akşamı için vanilya ve baharat mutlaka bulunan tam 3 parfüm öner.,"Romantik bir akşam için aradığınız vanilya ve sıcak baharat dengesini farklı karakterlerde sunan üç seçenek hazırladım:
+
+1. Spicebomb Extreme, akşamın karanlığına en çok yakışan, yoğun bir karakter sunuyor. İçeriğindeki tarçın ve bourbon viskisi, vanilya ile birleşerek oldukça çekici ve baskın bir sıcaklık yaratıyor. Eğer amacınız dikkat çekmek ve güçlü bir iz bırakmaksa, bu seçenek en karakterli tercih olacaktır.
+
+2. Le Male Le Parfum, daha pürüzsüz ve sofistike bir yaklaşım arayanlar için ideal bir denge noktası oluşturuyor. Vanilyanın tatlılığını iris ve lavanta ile yumuşatırken, sıcak baharatlarla derinlik kazandırıyor. Daha zarif, ""temiz ama çekici"" bir aura yaratmak istediğiniz randevular için güvenli ve etkileyici bir liman sunar.
+
+3. By the Fireplace, bu üçlü arasında en farklı ve atmosferik olanı olarak öne çıkıyor. Vanilya ve sıcak baharatların yanına eklenen kestane ve pembe biber notaları, adeta bir şömine başındaymışsınız hissi veren odunsu bir sıcaklık katıyor. Klasik bir tat yerine, daha sanatsal ve hikayesi olan bir koku arıyorsanız bu seçeneğe yönelebilirsiniz.
+
+Eğer daha maskülen ve baskın bir etki istiyorsanız Spicebomb Extreme; daha yumuşak ve modern bir çekicilik için Le Male Le Parfum doğru tercih olacaktır.",Tobacco Vanille by Tom Ford | Vanilla | 28 by Kayali Fragrances | By the Fireplace by Maison Martin Margiela | Spiritueuse Double Vanille by Guerlain | Layton by Parfums de Marly | Eros Flame by Versace | Le Male Le Parfum by Jean Paul Gaultier | Spicebomb Extreme by Viktor&Rolf,llm_grounded,12.3697,True,,,,,,
+fev1_sim_002,similarity_alternative,tr,Tobacco Vanille'e benzeyen ama tütünsüz tam 3 seçenek öner.,"Kayıtlara göre en güçlü seçenekler:
+1. Warm Black by Zara
+vanilla, fresh spicy, aromatic, sweet, balsamic, fresh, amber, powdery karakteriyle öne çıkıyor; kullanım aralığı winter, autumn ve day, night olarak kaydedilmiş.
+2. Tabac Rouge by Phaedon
+cinnamon, floral, fresh spicy, sweet, amber, honey, warm spicy, powdery karakteriyle öne çıkıyor; kullanım aralığı winter, autumn ve day, night olarak kaydedilmiş.
+3. Turmeric Latte Perfume by Lush
+vanilla, aromatic, sweet, earthy, balsamic, amber, warm spicy, powdery karakteriyle öne çıkıyor; kullanım aralığı winter, autumn ve day, night olarak kaydedilmiş.",Warm Black by Zara | Tabac Rouge by Phaedon | Turmeric Latte Perfume by Lush | Un Crime Exotique 12.1 by Pierre Guillaume Paris | Tonka by Reminiscence,validated_template_fallback,19.9904,True,,,,,,
+fev1_unsupported_002,unsupported,tr,Tobacco Vanille şu anda Türkiye'de stokta mı?,Canlı stok kaynağım olmadığı için güncel bulunabilirlik veya üretimden kalkma durumunu doğrulayamam.,,unsupported_availability,1.5069,True,,,,,,
+fev1_cmp_003,comparison,en,Compare Imagination by Louis Vuitton and Versace Pour Homme by Versace for office wear.,"Choosing between these two for an office environment depends on whether you want a sophisticated, complex aura or a reliable, clean classic.
+
+1. Imagination by Louis Vuitton offers a more elevated experience, blending a sharp citrus opening with a distinct tea and ginger character. Because it possesses a strong longevity and a moderate sillage, it maintains a polished presence throughout a long workday without becoming overwhelming. It leans into a more nuanced, aromatic profile that feels intentional and modern.
+
+2. Versace Pour Homme serves as the quintessential ""blue"" office staple, prioritizing a clean, floral-musky freshness that is incredibly easy to wear. Its moderate-restrained sillage makes it a very safe choice for close-quarters meetings, as it stays personal and unobtrusive. While it lacks the complex spice of the first option, it provides a dependable, bright atmosphere that works perfectly in the heat of spring or summer.
+
+If you want to project a more unique and high-end identity, Imagination is the superior choice. However, for a low-maintenance, high-value fragrance that blends seamlessly into the background, Versace Pour Homme is the practical winner.",Imagination by Louis Vuitton | Versace Pour Homme by Versace,llm_grounded_comparison,8.1043,True,,,,,,
+fev1_conv_003,conversation,tr,Ofis için vanilyasız tam 3 temiz parfüm öner.,"Ofis ortamının profesyonelliğine uyum sağlayan, temiz ve ferah bir imza arayışınız için şu üç seçenek öne çıkıyor:
+
+1. Imagination by Louis Vuitton, çay notaları ve narenciye birleşimiyle oldukça sofistike ve rafine bir temizlik sunuyor. İçeriğindeki zencefil ve ambroxan dokunuşları, onu sadece sıradan bir temizlikten ziyade karakterli ve modern bir seçeneğe dönüştürüyor.
+
+2. Versace Pour Homme, klasik ve güvenli bir tercih arayanlar için ideal bir denge noktası oluşturuyor. Neroli ve musk ağırlıklı yapısı, gün boyu sürecek hafif ve sabunsu bir ferahlık sağlayarak profesyonel ortamlarda asla göze batmayan bir nezaket sergiliyor.
+
+3. Reflection Man by Amouage, temizlik kavramını daha pudralı ve çiçeksi bir yöne çekerek farklılaşıyor. Iris ve beyaz çiçeklerin yarattığı bu yapı, ofis ortamında daha yumuşak, temiz ve kaliteli bir doku arayanlar için karakterli bir alternatif sunuyor.
+
+Eğer daha modern ve özgün bir duruş istiyorsanız Imagination; klasik, güvenli ve temiz bir başlangıç için Versace Pour Homme doğru tercih olacaktır.",Y Eau de Parfum by Yves Saint Laurent | Versace Pour Homme by Versace | Imagination by Louis Vuitton | Versace Man Eau Fraiche by Versace | Bleu de Chanel Eau de Parfum by Chanel | Reflection Man by Amouage | Terre d'Hermès by Hermès | Dior Homme Intense 2011 by Dior,llm_grounded,11.1721,True,,,,,,
+fev1_entity_003,entity_resolution,tr,Burberry Hero hakkında bilgi ver.,"Burberry Hero, modern ve dengeli bir karakter arayanlar için tasarlanmış, taze ama bir o kadar da sıcak bir duruş sergiliyor. Bergamot ve ardıç gibi ferahlatıcı dokunuşların, Atlas sediri ve karabiberin baharatlı sıcaklığıyla birleştiği bu koku; hem enerjik hem de oturaklı bir kimlik sunuyor.
+
+Kullanım deneyimi açısından bakıldığında, çiçeksi ve pudramsı esintilerle yumuşatılmış odunsu yapısı sayesinde bahar, yaz ve sonbahar aylarında günün her saatine uyum sağlayabiliyor. Performans değerleri incelendiğinde, kokunun yayılımının kontrollü ve kalıcılığının orta-hafif seviyede kaldığı görülüyor. Bu durum, Burberry Hero'yu çok baskın bir iz bırakmaktan ziyade, kişisel alanınızda daha zarif ve mesafeli bir aura yaratmak istediğiniz durumlar için ideal kılıyor.
+
+Eğer çok yoğun ve sürekli fark edilen bir koku yerine, teninizle bütünleşen, temiz ve karakterli bir odunsu ferahlık arıyorsanız bu seçenek beklentilerinizi karşılayacaktır.",Hero by Burberry,llm_grounded_profile,7.6398,True,,,,,,
+fev1_filter_003,hard_filters,en,Recommend exactly 3 rose fragrances that must not contain musk.,"Since you are looking for rose-centric scents without musk, I have selected three distinct interpretations of the flower that range from airy and botanical to rich and opulent.
+
+1. Red Roses by Jo Malone London offers a crisp, dew-covered garden experience where the rose is paired with mint and lemon. This is the most refreshing choice for a warm spring day, leaning into a green, ozonic character rather than a heavy floral weight.
+
+2. Chloé Eau de Parfum by Chloé provides a more polished, feminine approach by blending rose with litchi and peony. It feels brighter and more tropical than a traditional rose scent, making it a versatile daily option that balances floral sweetness with a clean, woody finish.
+
+3. Coco Eau de Parfum by Chanel serves as the sophisticated, heavy-hitting alternative for colder weather. Unlike the previous two, this is a dense, powdery composition where the Bulgarian rose is enveloped in vanilla, amber, and warm spices, creating a much more dramatic and cozy presence.
+
+If you want something light and natural for the daytime, Red Roses by Jo Malone London is your best bet; however, for a bold, evening statement, Coco Eau de Parfum by Chanel is the definitive choice.",Eros Flame by Versace | Coco Eau de Parfum by Chanel | Red Roses by Jo Malone London | Chloé Eau de Parfum by Chloé | Florabotanica by Balenciaga | Elysium Pour Homme Parfum Cologne by Roja Dove | Coco Eau de Toilette by Chanel | Safari by Ralph Lauren,llm_grounded,8.9789,True,,,,,,
+fev1_noisy_003,multilingual_noisy,tr,aventus nasil bi parfum,"Aventus by Creed, modern parfüm dünyasında kendine has bir yer edinmiş, çok yönlü bir karakter sunuyor. İçeriğindeki meyvemsi ve taze dokular, deri ve dumanlı notalarla birleşerek hem enerjik hem de oturaklı bir hava yaratıyor. Özellikle ananas ve elma gibi meyvelerin verdiği canlılık, odunsu ve hafif isli bir derinlikle dengeleniyor.
+
+Bu parfümün performansı orta düzeyde bir kalıcılık ve yayılım sunuyor; bu da onu hem gündüz hem de gece kullanımına uygun kılıyor. Bahar, yaz ve sonbahar aylarında tercih edilebilecek yapısı, temiz bir başlangıçtan daha karakterli ve maskülen bir bitişe doğru evriliyor. Hem profesyonel ortamlarda hem de sosyal etkinliklerde kullanılabilen, güvenli ama bir o kadar da dikkat çekici bir tercih olarak öne çıkıyor.",Aventus by Creed,llm_grounded_profile,5.8467,True,,,,,,
+fev1_profile_003,perfume_profile,tr,Team Five by Adidas nasıl bir parfüm? En uygun kullanım alanını anlat.,"Team Five by Adidas, özellikle hareketli ve enerjik anlar için tasarlanmış, ferahlığı ön planda tutan bir seçenek. İçeriğindeki adaçayı, nane ve yeşil elma gibi bileşenler sayesinde ilk etapta oldukça canlı, yeşil ve aromatik bir hava sunuyor. Bahar ve yaz aylarında, gün içinde kullanıma uygun yapısıyla temiz bir imaj çiziyor.
+
+Performans değerlerine baktığımızda, bu parfümün kalıcılığının hafif ve yayılımının kısıtlı olduğunu görüyoruz. Bu durum, Team Five'ı yoğun bir koku bulutu yaratmak yerine, sadece yakın çevrenizdeki kişilerin fark edebileceği, kişisel bir tazelik alanı oluşturmak için ideal kılıyor. Özellikle spor sonrası veya sıcak havalarda üzerinizde ağırlaşmadan duracak, doğal ve ferah bir dokunuş arıyorsanız doğru bir tercih olacaktır.
+
+Günlük kullanımda tazeliği korumak istediğiniz anlarda tercih edebilirsiniz.",Team Five by Adidas,llm_grounded_profile,8.0312,True,,,,,,
+fev1_rec_003,recommendation,en,Recommend exactly 3 fresh citrus summer fragrances for men.,"To capture that crisp, sun-drenched energy for the summer heat, I have selected three distinct ways to wear citrus.
+
+1. Imagination by Louis Vuitton offers a sophisticated, multi-layered experience where the sharp bite of citron and bergamot is smoothed out by a refined tea note and a touch of ginger. It feels more polished and complex than a standard citrus, making it ideal for someone who wants a fragrance that transitions seamlessly from a bright morning to a warm evening.
+
+2. Dior Homme Cologne 2013 provides the ultimate ""cold"" citrus sensation, focusing heavily on the sparkling clarity of calabrian bergamot and grapefruit blossom. This is your most refreshing option, designed to feel like a burst of icy water on a sweltering day, prioritizing a clean, powdery freshness over heavy spice.
+
+3. Versace Man Eau Fraiche leans into a more tropical, vibrant direction by blending lemon and bergamot with carambola star fruit and woody notes. It captures a playful, vacation-ready vibe that feels slightly more energetic and fruity compared to the more reserved elegance of the other two choices.
+
+If you want something high-end and nuanced, go with Imagination; for a pure, cooling blast of citrus, choose Dior Homme Cologne 2013; and for a bright, fruity summer vibe, Versace Man Eau Fraiche is the way to go.",Imagination by Louis Vuitton | Versace Pour Homme by Versace | Versace Man Eau Fraiche by Versace | Aventus by Creed | Allure Homme Sport by Chanel | Dior Homme Cologne 2013 by Dior | Hawas for Him by Rasasi | Y Eau de Parfum by Yves Saint Laurent,llm_grounded,10.8092,True,,,,,,
+fev1_sim_003,similarity_alternative,en,Give me exactly 3 fragrances similar to Santal 33 by Le Labo but without leather.,"Since you are looking for the creamy, woody essence of Santal 33 without its signature leather edge, the focus shifts toward the interplay of sandalwood, spices, and powdery textures.
+
+1. No.04 Bois de Balincourt by Maison Louis Marie offers a grounded, earthy alternative that leans into the warmth of cinnamon and cedar. While it captures that cozy, woody depth you likely enjoy, it presents a more balsamic and spicy profile compared to the dry woodiness of your reference. It maintains a moderate presence, making it a reliable choice for daily wear in cooler months.
+
+2. Bravo Monsieur by El Ganso provides a more sophisticated, multifaceted take on the sandalwood theme by incorporating iris and violet. This creates a powdery, aromatic atmosphere that mirrors the ""soft"" side of your inspiration while adding a touch of musk and incense. Because it possesses a strong longevity, it is the most enduring option here, ensuring the scent lingers throughout the day.
+
+3. Santal Dan Sha by Giorgio Armani serves as a bright, aromatic bridge for those who want the sandalwood core but with a fresher opening. It utilizes cardamom and violet leaf to create a spicy, balsamic vibe that feels airy yet substantial. It is a great middle-ground choice if you want to maintain the woody identity while opting for a more restrained, moderate-restrained sillage.
+
+If you want the closest textural match to the original's dry woodiness, go with No.04 Bois de Balincourt; for a more polished and long-lasting experience, Bravo Monsieur is the way to go.",No.04 Bois de Balincourt by Maison Louis Marie | Bravo Monsieur by El Ganso | Energetically New York by Zara | Book by Commodity | Young by Eisenberg | Autumn Vibes by Maison Martin Margiela | Santal Dan Sha by Giorgio Armani | LV Lovers by Louis Vuitton,llm_grounded_similarity,10.4957,True,,,,,,
+fev1_unsupported_003,unsupported,en,Is Santal 33 safe for someone with a severe fragrance allergy?,I cannot guarantee allergy or medical safety from perfume database fields. Check the ingredient label and consult a qualified professional when needed.,,unsupported_medical,1.5903,True,,,,,,
+fev1_cmp_004,comparison,tr,Santal 33 by Le Labo ile Prada L'Homme by Prada'yı tarz ve kullanım açısından karşılaştır.,"Bu iki parfüm, ortak bir iris ve pudralı doku paylaşsalar da bambaşka karakterler ve kullanım alanları sunuyor.
+
+1. Santal 33 by Le Labo, daha sanatsal ve belirgin bir duruş sergileyen, deri ve odunsu ağırlıklı bir seçenek. Kış, bahar ve sonbahar aylarına uygun olan bu koku, karakteristik yapısıyla dikkat çeken, hem gündüz hem gece kullanılabilen güçlü bir kalıcılığa sahip. Eğer daha özgün, hafif hayvansı ve karakteristik bir imza arıyorsanız, bu tercih sizi daha sofistike bir noktaya taşır.
+
+2. Prada L'Homme by Prada ise temizlik ve profesyonellik üzerine kurulu, çok daha güvenli bir liman sunuyor. Özellikle bahar ve yaz aylarında parlayan bu koku, taze baharatlı ve pudralı yapısıyla her ortama uyum sağlayan bir nezakete sahip. Orta düzeydeki yayılımı sayesinde çevrenizi rahatsız etmeden, sadece yakın mesafede hissedilen temiz bir aura yaratmak istediğinizde idealdir.
+
+Santal 33 daha karakterli ve mevsimsel bir derinlik arayanlar için uygunken, Prada L'Homme her gün kullanılabilecek, temiz ve risksiz bir tercih olarak öne çıkıyor.",Santal 33 by Le Labo | Prada L'Homme by Prada,llm_grounded_comparison,9.6803,True,,,,,,
+fev1_conv_004,conversation,tr,Aynı koşullarda daha sportif üç farklı seçenek ver.,"Ofis ortamında hem profesyonel duruşunuzu koruyacak hem de aradığınız sportif ve temiz enerjiyi verecek üç farklı yaklaşım hazırladım:
+
+1. Versace Man Eau Fraiche by Versace, listenin en ferah ve doğrudan ""sportif"" karakteri temsil eden seçeneği. Tropikal ve narenciye ağırlıklı yapısıyla, özellikle sıcak günlerde veya hareketli bir tempoda sizi tazelemiş hissettirecek kadar canlı bir açılışa sahip.
+
+2. Explorer by Montblanc, daha maskülen ve dinamik bir karakter arayanlar için ideal bir alternatif sunuyor. İçeriğindeki deri ve vetiver dokunuşları, narenciye ve baharatlarla birleşerek ofis ortamında özgüvenli, enerjik ve modern bir duruş sergilemenize yardımcı olur.
+
+3. Versace Pour Homme Dylan Blue by Versace, temizlik hissini su notaları ve musk ile birleştirirken, derinliğini ambroksan ve baharatlarla sağlıyor. Diğer ikisine göre daha çok yönlü bir yapısı var; hem sportif bir tazelik sunuyor hem de gün boyu süren profesyonel bir ağırlık barındırıyor.
+
+Eğer önceliğiniz maksimum ferahlık ise Versace Man Eau Fraiche; daha karakterli ve güçlü bir sportiflik istiyorsanız Explorer doğru tercih olacaktır.",Y Eau de Parfum by Yves Saint Laurent | Versace Man Eau Fraiche by Versace | Bleu de Chanel Eau de Parfum by Chanel | Terre d'Hermès by Hermès | Dior Homme Intense 2011 by Dior | Versace Pour Homme Dylan Blue by Versace | The One for Men Eau de Parfum by Dolce&Gabbana | Explorer by Montblanc,llm_grounded,11.1002,True,,,,,,
+fev1_entity_004,entity_resolution,en,What is YSL Y EDP like?,"1. Y Eau de Parfum by Yves Saint Laurent
+This option earns a place here with the fresh spicy, citrus, aromatic accords and a day, night wear profile. It earns a reputation for being wearable across spring, summer, and autumn while maintaining a strong longevity and moderate sillage.
+
+If you want a clear winner for polished office wear, Y Eau de Parfum by Yves Saint Laurent is the safest bet.",Y Eau de Parfum by Yves Saint Laurent,llm_grounded_profile,8.0444,True,,,,,,
+fev1_filter_004,hard_filters,tr,Narenciye mutlaka bulunan ama çiçeksi olmayan tam 3 parfüm öner.,"Narenciye tazeliğini ön plana çıkaran ancak çiçeksi karakterden uzak duran bir seçim arayışınız için şu üç seçenek öne çıkıyor:
+
+1. Versace Man Eau Fraiche by Versace, narenciye ve tropikal esintileri bir araya getirerek oldukça ferah ve enerjik bir profil sunuyor. Karambola ve limonun hakimiyeti, sıcak yaz günlerinde veya günlük kullanımda sizi taze tutacak, doğrudan meyvemsi ve aromatik bir deneyim vadediyor.
+
+2. Pacific Chill by Louis Vuitton, narenciye notalarını yeşil ve tatlı dokunuşlarla harmanlayarak daha sofistike bir derinlik kazanıyor. İçeriğindeki turunçgil ve limonun meyvemsi karakteri, hafif pudralı ve taze baharatlı bir yapıya bürünerek hem gündüz hem de yaz akşamları için çok yönlü bir kullanım alanı yaratıyor.
+
+3. Cedrat Boise by Mancera, narenciye tazeliğini deri ve odunsu notalarla birleştirerek daha karakterli ve maskülen bir yöne evriliyor. Sicilya limonu ve bergamotun başlangıçtaki canlılığı, zamanla deri ve vanilya ile dengelenerek daha ağırbaşlı ve dikkat çekici bir duruş sergiliyor.
+
+Eğer sadece saf bir tazelik arıyorsanız Versace Man Eau Fraiche en güvenli liman; ancak narenciyenin daha karakteristik ve kalıcı bir yapıya bürünmesini isterseniz Cedrat Boise doğru tercih olacaktır.",Versace Man Eau Fraiche by Versace | Pacific Chill by Louis Vuitton | Aventus by Creed | Bleu de Chanel Eau de Parfum by Chanel | Vibrato by Sospiro Perfumes | Cedrat Boise by Mancera | Y Eau de Parfum by Yves Saint Laurent | Les Exclusifs de Chanel Coromandel by Chanel,llm_grounded,10.6921,True,,,,,,
+fev1_noisy_004,multilingual_noisy,en,cmpare eros by versace n eros flame by versace,"Grounded comparison:
+
+Eros by Versace
+- Character: vanilla, fresh spicy, citrus, aromatic, fruity, green, amber, woody
+- Wear: winter, spring, summer, autumn; day, night
+- Performance: longevity 3.48, sillage 2.46
+
+Eros Flame by Versace
+- Character: vanilla, fresh spicy, citrus, aromatic, sweet, warm spicy, woody, powdery
+- Wear: winter, spring, autumn; day, night
+- Performance: longevity 3.68, sillage 2.5",Eros by Versace | Eros Flame by Versace,validated_template_fallback,12.2231,True,,,,,,
+fev1_profile_004,perfume_profile,en,Tell me what Versace Pour Homme by Versace is like and where it works best.,"Versace Pour Homme is a bright, clean fragrance that leans into a refreshing aromatic profile. It opens with a crisp citrus and green energy, balanced by a floral heart of neroli and rose that keeps it from feeling overly sharp. Because it carries a musky and fresh spicy undertone, it maintains a polished, approachable aura throughout the day.
+
+This scent is specifically designed for daytime wear during the spring and summer months. Given its moderate longevity and moderate-restrained sillage, it functions as an excellent ""blue"" staple for environments where you want to smell groomed and airy without overwhelming the space around you. It is a reliable choice for casual outings or a professional setting where a clean, understated presence is preferred over a heavy trail.",Versace Pour Homme by Versace,llm_grounded_profile,6.8118,True,,,,,,
+fev1_rec_004,recommendation,tr,"Kadınlar için kış gecesine uygun, vanilyalı tam 3 parfüm öner.","Kış gecelerinin soğuğuna eşlik edecek, vanilya ağırlıklı üç farklı karakter sunan seçenekleri aşağıda bulabilirsiniz:
+
+1. Tobacco Vanille by Tom Ford, kış akşamlarının ağırlığını ve zenginliğini taşımak isteyenler için oldukça karakterli bir tercih. Vanilyanın tatlılığını tütün yaprağı ve kakao ile birleştirerek, sıcak ve baharatlı bir derinlik sunuyor; bu da onu daha sofistike ve baskın bir duruş arayanlar için ideal kılıyor.
+
+2. By the Fireplace by Maison Martin Margiela, adından da anlaşılacağı üzere şömine başında oturuyormuş hissi veren, odunsu ve kuruyemiş notalarıyla zenginleşmiş bir kış kokusu. Vanilya burada pembe biber ve kestane ile harmanlanarak daha dumanlı ve sıcak bir atmosfer yaratıyor, bu da onu kış geceleri için çok samimi bir seçenek haline getiriyor.
+
+3. Bianco Latte by Giardini Di Toscana, daha kremsi ve iştah açıcı bir tatlılık arayanlara hitap eden, bal ve karamel dokunuşlarıyla öne çıkan bir seçenek. Vanilyanın yumuşaklığını beyaz misk ve karamelle birleştirerek, daha modern ve ""gurme"" bir tatlılık sunuyor; bu koku, daha yumuşak ama belirgin bir tatlılık arayanlar için uygun.
+
+Eğer daha ağır ve tütünlü bir karakter istiyorsanız Tobacco Vanille, şömine sıcaklığını hissettiren odunsu bir yapı arıyorsanız By the Fireplace, daha kremsi ve tatlı bir deneyim için ise Bianco Latte doğru tercih olacaktır.",Bare Vanilla by Victoria's Secret | Tobacco Vanille by Tom Ford | Vanilla | 28 by Kayali Fragrances | Coco Mademoiselle by Chanel | By the Fireplace by Maison Martin Margiela | Bianco Latte by Giardini Di Toscana | Vanilla Lace by Victoria's Secret | La Nuit Trésor by Lancôme,llm_grounded,13.0586,True,,,,,,
+fev1_sim_004,similarity_alternative,tr,"Bleu de Chanel EDP'ye alternatif, daha narenciyeli tam 3 parfüm öner.","Kayıtlara göre en güçlü seçenekler:
+1. Bleu de Chanel by Chanel
+fresh spicy, citrus, aromatic, smoky, balsamic, amber, warm spicy, woody karakteriyle öne çıkıyor; kullanım aralığı spring, summer, autumn ve day, night olarak kaydedilmiş.
+2. Club de Nuit Blue Iconic by Armaf
+fresh spicy, citrus, aromatic, balsamic, fresh, amber, warm spicy, woody karakteriyle öne çıkıyor; kullanım aralığı spring, summer, autumn ve day, night olarak kaydedilmiş.
+3. Bleu de Chanel Parfum by Chanel
+fresh spicy, citrus, aromatic, green, amber, warm spicy, woody, powdery karakteriyle öne çıkıyor; kullanım aralığı winter, spring, summer, autumn ve day, night olarak kaydedilmiş.",Bleu de Chanel by Chanel | Club de Nuit Blue Iconic by Armaf | Bleu de Chanel Parfum by Chanel | Zenith Deep by French Avenue | Maître de Blue by Maison Alhambra | Kings & Queens Blue by Amaran | Historic Olmeda by Afnan | Amber Oud Bleu Edition by Al Haramain Perfumes,validated_template_fallback,21.3369,True,,,,,,
+fev1_unsupported_004,unsupported,tr,En çok iltifat getirecek parfüm hangisi?,Veritabanı iltifat sonucunu kaydetmediği için buna dayalı güvenilir bir iddiada bulunamam.,,unsupported_social_claim,1.128,True,,,,,,
+fev1_cmp_005,comparison,en,Compare Spicebomb Extreme by Viktor&Rolf with Le Male Le Parfum by Jean Paul Gaultier for a date night.,"Grounded comparison:
+
+Spicebomb Extreme by Viktor&Rolf
+- Character: cinnamon, vanilla, whiskey, fresh spicy, sweet, tobacco, warm spicy, powdery
+- Wear: winter, autumn; day, night
+- Performance: longevity 3.81, sillage 2.7
+
+Le Male Le Parfum by Jean Paul Gaultier
+- Character: vanilla, iris, aromatic, woody, amber, warm spicy, lavender, powdery
+- Wear: winter, autumn; day, night
+- Performance: longevity 3.75, sillage 2.33",Spicebomb Extreme by Viktor&Rolf | Le Male Le Parfum by Jean Paul Gaultier,validated_template_fallback,14.0667,True,,,,,,
+fev1_conv_005,conversation,en,Recommend exactly 3 citrus summer fragrances for men.,"To find the perfect citrus companion for the summer heat, we need to balance refreshing brightness with a structure that feels intentional rather than fleeting. Based on your request, here are three distinct directions:
+
+1. Imagination by Louis Vuitton offers a sophisticated, multi-dimensional experience where the sharp zest of citron and bergamot meets a unique Chinese black tea accord. It transitions beautifully from day to night, providing a polished, aromatic depth that feels more complex than a standard citrus scent.
+
+2. Dior Homme Cologne 2013 serves as the ultimate ""clean"" option, focusing on a crisp, powdery explosion of calabrian bergamot and grapefruit blossom. This is the most minimalist choice, designed to mimic the sensation of a cold shower on a sweltering day, making it ideal for high-temperature environments where you want to stay airy.
+
+3. Versace Man Eau Fraiche provides a more vibrant, tropical energy by blending lemon and bergamot with carambola star fruit and warm spices. It leans into a fruitier, more energetic profile compared to the others, making it a great pick if you prefer a scent with a bit more ""pop"" and personality.
+
+If you want something elegant and nuanced for social events, Imagination is the standout. However, for pure, cooling relief in the peak of summer, Dior Homme Cologne 2013 is the safer, more refreshing bet.",Versace Pour Homme by Versace | Imagination by Louis Vuitton | Versace Man Eau Fraiche by Versace | Aventus by Creed | Reflection Man by Amouage | 1872 For Men by Clive Christian | 212 Men by Carolina Herrera | Dior Homme Cologne 2013 by Dior,llm_grounded,10.3692,True,,,,,,
+fev1_entity_005,entity_resolution,tr,Prada L'Homme nasıl bir parfüm?,"Prada L'Homme, temizlik ve profesyonellik arasındaki o ince çizgiyi çok dengeli bir şekilde yakalayan, güven veren bir koku. İçeriğindeki iris ve pudralı dokunuşlar, parfüme sabunsu ve pürüzsüz bir hava katarken; neroli ve baharatlı notalar bu yumuşaklığı modern bir tazelikle dengeliyor.
+
+1. Prada L'Homme, özellikle iş ortamında veya gündelik şıklık aradığınız anlarda ""temiz ve bakımlı"" görünmek için ideal bir tercih. Yayılımı orta-kısıtlı düzeyde kaldığı için çevrenizdekileri boğmayan, sadece yakınınızdaki kişilere ulaşan nazik bir aura yaratıyor. Bahar ve yaz aylarına çok yakışan bu koku, hem gündüz hem de gece kullanımına uygun çok yönlü bir yapı sunuyor.
+
+Eğer her ortama uyum sağlayacak, risk içermeyen ve karakterli bir temizlik hissi arıyorsanız bu seçenek en güvenli limanınız olacaktır.",Prada L'Homme by Prada,llm_grounded_profile,6.6513,True,,,,,,
+fev1_filter_005,hard_filters,en,Recommend exactly 3 coconut fragrances without vanilla.,"To find the perfect coconut scent without vanilla, we need to look at how the fruit interacts with different environments—ranging from sun-drenched beaches to sophisticated, floral gardens.
+
+1. Waikiki Beach Coconut by Bath & Body Works captures a literal seaside escape, blending coconut with sea salt and mineral notes to evoke the feeling of sand and surf. It is the most straightforward choice for a bright, aquatic daytime vibe during the spring or summer.
+
+2. Crystal Noir by Versace offers a much deeper, more mysterious interpretation by pairing coconut with warm spices and white florals. Because it leans into autumn and winter wearability, it provides a cozy, lactonic warmth that feels far more intimate and sophisticated than a typical tropical scent.
+
+3. Carnal Flower by Frederic Malle serves as the high-art alternative, where coconut meets a heavy dose of tuberose and animalic notes. This is a complex, white floral powerhouse that feels creamy and slightly provocative, making it ideal for someone seeking a bold, artistic statement rather than a simple fruity fragrance.
+
+If you want a literal vacation in a bottle, go with Waikiki Beach Coconut; however, if you prefer a sophisticated, evening-ready depth, Crystal Noir is the more versatile transition.",Waikiki Beach Coconut by Bath & Body Works | Crystal Noir by Versace | Body Fantasies Signature Coconut Fantasy by Parfums de Coeur | Carnal Flower by Frederic Malle | Philosykos Eau de Parfum by Diptyque | Atlantis Extrait by French Avenue | Powdery Coconut by Dossier | Taj Sunset by Escada,llm_grounded,9.4149,True,,,,,,

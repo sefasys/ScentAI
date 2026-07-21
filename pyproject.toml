@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scentai"
+version = "0.1.0"
+description = "A grounded, retrieval-augmented perfume consultant"
+requires-python = ">=3.12"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "deploy/src", "."]
+testpaths = ["tests", "deploy/tests"]
+
