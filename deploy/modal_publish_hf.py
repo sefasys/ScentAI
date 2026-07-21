@@ -16,7 +16,7 @@ MODEL_VOLUME_NAME = "scentai-models"
 HF_SECRET_NAME = "scentai-huggingface"
 ADAPTER_DIR = Path("/models/scentai")
 BASE_MODEL_NAME = "google/gemma-4-12B-it"
-DEFAULT_REPO_NAME = "scentai-gemma-4-12b-it-lora"
+DEFAULT_REPO_NAME = "scentai"
 EXPECTED_TARGET_MODULES = {
     "q_proj",
     "k_proj",

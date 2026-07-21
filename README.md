@@ -1,6 +1,6 @@
 # ScentAI
 
-**[Model adapter on Hugging Face](https://huggingface.co/sefasys/scentai-gemma-4-12b-it-lora)** ·
+**[Model adapter on Hugging Face](https://huggingface.co/sefasys/scentai)** ·
 **[Training dataset on Kaggle](https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations)**
 
 ScentAI is an experimental, grounded perfume consultant built around a 131,930-item perfume catalog. It combines semantic retrieval, structured filtering, canonical entity resolution, a fine-tuned Gemma 4 adapter, and answer validation to produce recommendations that remain tied to catalog evidence.
@@ -111,7 +111,7 @@ Tests that require the external SQLite catalog are skipped when that artifact is
 
 The complete runtime requires three external artifacts:
 
-1. the [ScentAI Gemma 4 LoRA adapter](https://huggingface.co/sefasys/scentai-gemma-4-12b-it-lora);
+1. the [ScentAI Gemma 4 LoRA adapter](https://huggingface.co/sefasys/scentai);
 2. the BGE-M3 Chroma index;
 3. the SQLite perfume catalog and similarity graph.
 
@@ -120,7 +120,7 @@ They are intentionally not committed to Git. See [Artifacts and data](docs/artif
 ## Model Adapter
 
 The evaluated rank-16 PEFT adapter is published as
-**[sefasys/scentai-gemma-4-12b-it-lora](https://huggingface.co/sefasys/scentai-gemma-4-12b-it-lora)**.
+**[sefasys/scentai](https://huggingface.co/sefasys/scentai)**.
 It can be attached to the separately distributed `google/gemma-4-12B-it` base model with
 Transformers and PEFT:
 
@@ -134,7 +134,7 @@ base = AutoModelForMultimodalLM.from_pretrained(
 )
 model = PeftModel.from_pretrained(
     base,
-    "sefasys/scentai-gemma-4-12b-it-lora",
+    "sefasys/scentai",
 )
 ```
 
@@ -196,7 +196,7 @@ This source repository does **not** contain:
 - raw or cleaned perfume catalog exports;
 - large generated training exports ([download them from Kaggle](https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations));
 - LoRA checkpoints or base-model weights (the final adapter is distributed separately on
-  [Hugging Face](https://huggingface.co/sefasys/scentai-gemma-4-12b-it-lora));
+  [Hugging Face](https://huggingface.co/sefasys/scentai));
 - Chroma or SQLite runtime snapshots;
 - API keys, tokens, or deployment secrets.
 

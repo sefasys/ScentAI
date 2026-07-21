@@ -149,7 +149,7 @@ start an A100:
 
 ```bash
 modal run deploy/modal_publish_hf.py \
-  --repo-name scentai-gemma-4-12b-it-lora
+  --repo-name scentai
 ```
 
 The publisher:

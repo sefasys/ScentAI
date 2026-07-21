@@ -74,7 +74,7 @@ from peft import PeftModel
 from transformers import AutoModelForMultimodalLM, AutoProcessor
 
 BASE_MODEL = "google/gemma-4-12B-it"
-ADAPTER_MODEL = "sefasys/scentai-gemma-4-12b-it-lora"
+ADAPTER_MODEL = "sefasys/scentai"
 
 processor = AutoProcessor.from_pretrained(BASE_MODEL)
 base_model = AutoModelForMultimodalLM.from_pretrained(
