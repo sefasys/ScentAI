@@ -181,12 +181,25 @@ python tools/build_kaggle_package.py \
   --owner YOUR_KAGGLE_USERNAME
 ```
 
-After inspecting `manifest.json`, authenticate with Kaggle and create the dataset privately first:
+After inspecting `manifest.json`, authenticate with Kaggle and create the dataset privately first.
+The current Kaggle CLI requires Python 3.11 or newer and supports browser login:
 
 ```bash
 kaggle auth login
 kaggle datasets create -p /path/to/kaggle_release/scentai-32k-grounded-perfume-conversations
 ```
+
+Older Kaggle API clients, including `1.7.4.5`, do not provide `kaggle auth login`. For those
+versions, create a **Legacy API Key** from the Kaggle API settings page, place the downloaded
+`kaggle.json` at the location named by the client's error message, and restrict its permissions:
+
+```bash
+mkdir -p ~/.config/kaggle
+install -m 600 ~/Downloads/kaggle.json ~/.config/kaggle/kaggle.json
+kaggle datasets list --mine
+```
+
+Never commit `kaggle.json`, an access token, or its contents to this repository.
 
 The public/private setting can then be reviewed on Kaggle before publication. Passing `--public`
 to `kaggle datasets create` publishes immediately and should only be used after the package has
