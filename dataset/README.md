@@ -8,6 +8,9 @@ preference-aware consultation.
 This dataset is the training corpus used by the ScentAI research project. It is not a dump of the
 underlying perfume catalog and contains no real user conversations.
 
+Public release:
+https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations
+
 ## Files
 
 | File | Records | Assistant role | Purpose |
@@ -178,7 +181,7 @@ python tools/audit_training_dataset.py \
 python tools/build_kaggle_package.py \
   --dataset-root /path/to/Perfume-Dataset \
   --output /path/to/kaggle_release/scentai-32k-grounded-perfume-conversations \
-  --owner YOUR_KAGGLE_USERNAME
+  --owner sefasoysal
 ```
 
 After inspecting `manifest.json`, authenticate with Kaggle and create the dataset privately first.
@@ -207,5 +210,10 @@ been checked.
 
 ## Citation
 
-Until a formal archival citation is available, cite the Kaggle dataset URL, repository URL, version,
-and access date. Also cite the Le Decanteur source dataset listed above.
+Suggested citation:
+
+> Soysal, S. (2026). ScentAI 32K Grounded Perfume Conversations [Data set]. Kaggle.
+> https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations
+
+Include the dataset version and access date where required. Because this is a derivative dataset,
+also cite the Le Decanteur source dataset listed above.

@@ -29,10 +29,11 @@ The evaluated catalog contained 131,930 perfumes and 692,729 directed similarity
 
 ## Dataset Distribution
 
-The 32,000-record synthetic conversation corpus is a derivative of [Le Decanteur's Fragrantica
+The [ScentAI 32K Grounded Perfume Conversations](https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations)
+corpus is published on Kaggle. It is a derivative of [Le Decanteur's Fragrantica
 Perfumes dataset](https://www.kaggle.com/datasets/ledecanteur/fragrantica-perfumes), which is
-licensed under CC BY-NC-SA 4.0. It is prepared for separate Kaggle distribution under the same
-license. The Git repository contains its dataset card, attribution, statistics, sample, and
+licensed under CC BY-NC-SA 4.0, and is distributed under the same license. The Git repository
+contains its dataset card, attribution, statistics, sample, and
 reproducible packaging tools, while the compressed JSONL exports remain in the dataset registry.
 
 The Kaggle package deliberately contains generated conversations rather than a second copy of the

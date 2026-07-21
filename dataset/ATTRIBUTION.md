@@ -3,6 +3,9 @@
 ScentAI 32K Grounded Perfume Conversations was created by the ScentAI project from structured
 perfume evidence and synthetic instruction-generation pipelines.
 
+Published dataset:
+https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations
+
 The perfume evidence derives from:
 
 > Le Decanteur. "Fragrantica Perfumes: Ratings, Notes, Votes & More," version 2, Kaggle, 2026.
@@ -14,4 +17,3 @@ query generation, deterministic selection and validation, curriculum labeling, s
 role conversion, and train-validation splitting.
 
 ScentAI is independent and is not affiliated with or endorsed by Fragrantica or Le Decanteur.
-

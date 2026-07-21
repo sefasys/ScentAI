@@ -125,7 +125,7 @@ The synthetic training curriculum separates five behavior levels:
 | L4 | grounded recommendations with reasoning |
 | L5 | profile-aware and multi-turn personalization |
 
-The main training plan contains 32,000 examples. Generation code, quality gates, provider pooling, checkpointing, and dataset validators live under [`research/`](research/). The generated corpus is documented separately from the source code and prepared for Kaggle distribution under its inherited data license.
+The main training plan contains 32,000 examples. Generation code, quality gates, provider pooling, checkpointing, and dataset validators live under [`research/`](research/). The generated corpus is documented separately from the source code and published on Kaggle under its inherited data license.
 
 ## Dataset
 
@@ -133,8 +133,10 @@ The main training plan contains 32,000 examples. Generation code, quality gates,
 project. It contains 32,000 synthetic, three-message conversations across the L1-L5 curriculum,
 plus a reproducible 30,400/1,600 train-validation split.
 
+**[Download ScentAI 32K on Kaggle](https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations)**
+
 The perfume evidence derives from [Fragrantica Perfumes: Ratings, Notes, Votes & More](https://www.kaggle.com/datasets/ledecanteur/fragrantica-perfumes),
-published by Le Decanteur on Kaggle. The derived conversation dataset is therefore prepared under
+published by Le Decanteur on Kaggle. The derived conversation dataset is therefore released under
 `CC BY-NC-SA 4.0`: attribution is required, commercial use is prohibited, and adaptations must use
 the same license. ScentAI is independent and is not affiliated with Fragrantica or Le Decanteur.
 
@@ -163,7 +165,7 @@ Cold starts can take several minutes because the model worker scales to zero. Wa
 This source repository does **not** contain:
 
 - raw or cleaned perfume catalog exports;
-- large generated training exports (they are packaged separately for Kaggle);
+- large generated training exports ([download them from Kaggle](https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations));
 - LoRA checkpoints or base-model weights;
 - Chroma or SQLite runtime snapshots;
 - API keys, tokens, or deployment secrets.
