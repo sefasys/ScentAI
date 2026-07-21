@@ -134,3 +134,4 @@ ScentAI is a working experimental system, not a finished commercial service. Cur
 
 No open-source license has been selected yet. Source availability should not be interpreted as permission to redistribute the datasets, model weights, or third-party material.
 
+# ScentAI
