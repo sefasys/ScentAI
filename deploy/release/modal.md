@@ -141,6 +141,35 @@ modal run deploy/modal_app.py::regression \
 `--limit 0` means all cases. A regression failure exits non-zero and keeps the complete output
 for diagnosis.
 
+## 8. Publish The LoRA To Hugging Face
+
+The evaluated adapter can be published from `scentai-models` directly to a private Hugging Face
+model repository. This CPU-only path does not download the adapter to the local machine and does not
+start an A100:
+
+```bash
+modal run deploy/modal_publish_hf.py \
+  --repo-name scentai-gemma-4-12b-it-lora
+```
+
+The publisher:
+
+- reads only `/models/scentai` from the Modal Volume;
+- rejects a wrong base model, rank, target-module set, DoRA adapter, truncated weights, invalid
+  safetensors file, or any of the known pilot-checkpoint hashes;
+- derives the Hugging Face owner from `HF_TOKEN` rather than hard-coding an account;
+- uploads only `adapter_config.json`, `adapter_model.safetensors`, the model card, license, and a
+  hash manifest;
+- creates the repository as private so its card and loading example can be checked before release.
+
+The existing `scentai-huggingface` Modal secret must contain a Hugging Face token with write access.
+If the token was created for model downloads only, replace it through the Modal dashboard before
+running the publisher. Never paste the token into source code or commit it to Git.
+
+After the command reports the Hub URL, inspect the repository and make it public from Hugging Face
+Settings. The model card under [`model/README.md`](../../model/README.md) shows the supported
+Transformers + PEFT loading path and clearly separates adapter behavior from the full RAG pipeline.
+
 ## Cost and lifecycle controls
 
 - `min_containers=0`: no always-on GPU.

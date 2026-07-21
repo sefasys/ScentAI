@@ -63,8 +63,9 @@ notebooks/          Curated Colab workflows for training and inference
 evaluation/         Frozen 120-case evaluation set and compact reports
 tests/              Artifact-free unit and contract tests
 dataset/            Dataset card, attribution, license, sample, and Kaggle metadata
+model/              Hugging Face model card and adapter license
 docs/               Architecture, methodology, artifacts, and roadmap
-tools/              Dataset audit and release-packaging utilities
+tools/              Dataset audit and release packaging utilities
 ```
 
 ## Evaluation Snapshot
@@ -173,6 +174,10 @@ This source repository does **not** contain:
 The code can be reviewed and tested without those files. A small schema-valid example and complete
 dataset documentation are kept under [`dataset/`](dataset/). Reproducing the complete hosted system
 still requires compatible runtime artifacts as documented in [Artifacts and data](docs/artifacts.md).
+
+The Hugging Face-ready adapter card and loading example live under [`model/`](model/). The final
+adapter can be published directly from the private Modal Volume with
+[`modal_publish_hf.py`](deploy/modal_publish_hf.py), avoiding a local round trip for the weights.
 
 ## Project Status
 
