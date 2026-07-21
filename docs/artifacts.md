@@ -43,7 +43,7 @@ the relationship between the Gemma and OpenAI-compatible exports.
 ## Model Distribution
 
 The evaluated adapter is published in the dedicated
-[ScentAI Gemma 4 12B LoRA repository](https://huggingface.co/sefasoysal/scentai-gemma-4-12b-it-lora)
+[ScentAI Gemma 4 12B LoRA repository](https://huggingface.co/sefasys/scentai-gemma-4-12b-it-lora)
 after review of the inherited base-model and training-data terms. It contains only
 `adapter_config.json`, `adapter_model.safetensors`, its model card, license, and release manifest;
 the Gemma 4 base weights remain separately distributed by Google.
