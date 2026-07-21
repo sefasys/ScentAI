@@ -1,5 +1,8 @@
 # ScentAI
 
+**[Model adapter on Hugging Face](https://huggingface.co/sefasoysal/scentai-gemma-4-12b-it-lora)** ·
+**[Training dataset on Kaggle](https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations)**
+
 ScentAI is an experimental, grounded perfume consultant built around a 131,930-item perfume catalog. It combines semantic retrieval, structured filtering, canonical entity resolution, a fine-tuned Gemma 4 adapter, and answer validation to produce recommendations that remain tied to catalog evidence.
 
 This repository is a research preview. The end-to-end system works, the public deployment architecture is implemented, and the functional evaluation suite passes. Visual design and product ergonomics are still evolving.
@@ -108,11 +111,36 @@ Tests that require the external SQLite catalog are skipped when that artifact is
 
 The complete runtime requires three external artifacts:
 
-1. the ScentAI Gemma 4 LoRA adapter;
+1. the [ScentAI Gemma 4 LoRA adapter](https://huggingface.co/sefasoysal/scentai-gemma-4-12b-it-lora);
 2. the BGE-M3 Chroma index;
 3. the SQLite perfume catalog and similarity graph.
 
 They are intentionally not committed to Git. See [Artifacts and data](docs/artifacts.md), [Modal deployment](deploy/release/modal.md), and the notebooks in [`notebooks/`](notebooks/) for the expected layout.
+
+## Model Adapter
+
+The evaluated rank-16 PEFT adapter is published as
+**[sefasoysal/scentai-gemma-4-12b-it-lora](https://huggingface.co/sefasoysal/scentai-gemma-4-12b-it-lora)**.
+It can be attached to the separately distributed `google/gemma-4-12B-it` base model with
+Transformers and PEFT:
+
+```python
+from peft import PeftModel
+from transformers import AutoModelForMultimodalLM
+
+base = AutoModelForMultimodalLM.from_pretrained(
+    "google/gemma-4-12B-it",
+    device_map="auto",
+)
+model = PeftModel.from_pretrained(
+    base,
+    "sefasoysal/scentai-gemma-4-12b-it-lora",
+)
+```
+
+The adapter is not a standalone copy of Gemma 4 and does not include the perfume catalog or
+retrieval index. See the [model card](model/README.md) for the processor-aware generation example,
+scope, provenance, evaluation boundaries, and license.
 
 ## Research Pipeline
 
@@ -167,7 +195,8 @@ This source repository does **not** contain:
 
 - raw or cleaned perfume catalog exports;
 - large generated training exports ([download them from Kaggle](https://www.kaggle.com/datasets/sefasoysal/scentai-32k-grounded-perfume-conversations));
-- LoRA checkpoints or base-model weights;
+- LoRA checkpoints or base-model weights (the final adapter is distributed separately on
+  [Hugging Face](https://huggingface.co/sefasoysal/scentai-gemma-4-12b-it-lora));
 - Chroma or SQLite runtime snapshots;
 - API keys, tokens, or deployment secrets.
 
@@ -175,8 +204,8 @@ The code can be reviewed and tested without those files. A small schema-valid ex
 dataset documentation are kept under [`dataset/`](dataset/). Reproducing the complete hosted system
 still requires compatible runtime artifacts as documented in [Artifacts and data](docs/artifacts.md).
 
-The Hugging Face-ready adapter card and loading example live under [`model/`](model/). The final
-adapter can be published directly from the private Modal Volume with
+The Hugging Face adapter card and loading example are maintained under [`model/`](model/). Release
+updates are published directly from the private Modal Volume with
 [`modal_publish_hf.py`](deploy/modal_publish_hf.py), avoiding a local round trip for the weights.
 
 ## Project Status
@@ -184,5 +213,3 @@ adapter can be published directly from the private Modal Volume with
 ScentAI is a working experimental system, not a finished commercial service. Current priorities are documented in the [roadmap](docs/roadmap.md). The frontend included here is functional, but its final visual language is still in progress.
 
 No open-source license has been selected yet. Source availability should not be interpreted as permission to redistribute the datasets, model weights, or third-party material.
-
-# ScentAI

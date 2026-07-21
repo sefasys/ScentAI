@@ -25,6 +25,9 @@ ScentAI is a rank-16 LoRA adapter for `google/gemma-4-12B-it`, trained on the
 curriculum. It adapts Gemma 4 toward evidence-grounded perfume consultation, including factual
 profiles, hard constraints, semantic recommendations, comparisons, and preference-aware responses.
 
+The complete retrieval, orchestration, validation, evaluation, and deployment source is available
+in the [ScentAI GitHub repository](https://github.com/sefasys/ScentAI).
+
 This repository contains only the PEFT adapter. It does not duplicate the approximately 24 GB base
 model, the 131,930-item perfume catalog, the BGE-M3 index, or the ScentAI validation pipeline.
 
@@ -167,4 +170,3 @@ separately under its own license. Product names and trademarks remain the proper
 
 ScentAI is independent and is not affiliated with or endorsed by Google, Hugging Face, Fragrantica,
 Le Decanteur, or any perfume house.
-

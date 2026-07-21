@@ -42,8 +42,15 @@ the relationship between the Gemma and OpenAI-compatible exports.
 
 ## Model Distribution
 
-Model adapters should live in a dedicated model registry only after their inherited base-model and
-training-data terms have been reviewed. Chroma and SQLite runtime snapshots remain deployment
-artifacts rather than public dataset files.
+The evaluated adapter is published in the dedicated
+[ScentAI Gemma 4 12B LoRA repository](https://huggingface.co/sefasoysal/scentai-gemma-4-12b-it-lora)
+after review of the inherited base-model and training-data terms. It contains only
+`adapter_config.json`, `adapter_model.safetensors`, its model card, license, and release manifest;
+the Gemma 4 base weights remain separately distributed by Google.
+
+The adapter files can be downloaded through PEFT/Transformers or with `snapshot_download` from
+`huggingface_hub`. Chroma and SQLite runtime snapshots remain deployment artifacts rather than
+public dataset files because they contain a repackaged index/catalog representation and are not
+required to inspect or import the adapter itself.
 
 Historical release manifests are retained under [`evaluation/historical_manifests`](../evaluation/historical_manifests/) for provenance. Their paths describe the original development workspace and are not current installation instructions.
