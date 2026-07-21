@@ -1,6 +1,6 @@
 {
   "title": "ScentAI 32K Grounded Perfume Conversations",
-  "id": "YOUR_KAGGLE_USERNAME/scentai-32k-grounded-perfume-conversations",
+  "id": "sefasoysal/scentai-32k-grounded-perfume-conversations",
   "subtitle": "Synthetic L1-L5 chat data for grounded perfume recommendation and preference-aware fine-tuning",
   "licenses": [
     {
